@@ -53,7 +53,7 @@
         date_heure_prestation
         duree
         prix_par_heure
-        montant_total
+        **montant_total**
         statut
         (en attent , en cours , finaliser)
 
