@@ -1,120 +1,42 @@
 
 @extends('appauth')
 @section('content')
-<br>
-<div class="py-240 position-relative">
-    <div class="background">
-        <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="assets/img/home.jpg" alt=""></div>
-    </div>
-</div>
-<div class="pt-80 pb-130">
-            <div class="container">
-                <!-- Isotope-->
-                <div class="isotope">
-                    <ul class="nav justify-content-center isotope-filters mb-60">
-                        <li class="nav-item active"><a class="nav-link" href="#" data-filter="all">All</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-filter="marketing">Marketing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-filter="company">Company</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-filter="business">Business</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" data-filter="architecture1">Architecture</a></li>
-                    </ul>
-                    <div class="row isotope-grid gy-30">
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="architecture1">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Architecture</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">In isn't light you'll divide</a>
-                                    <p class="card-text">Shall seasons seasons darkness over own there subdue all it.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="company">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Company</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">Unto saw first great spirit</a>
-                                    <p class="card-text">Winged Also which midst deep grass gathered seas gathered you.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="business">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Business</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">It was seasons divided</a>
-                                    <p class="card-text">Yielding also isn't gathering sea face second male heaven evening.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="company">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Company</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">Behold replenish fifth</a>
-                                    <p class="card-text">Let fruit was beginning thing seed which fruitful place there.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="marketing">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="single-post.html" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Marketing</span><img loading="lazy" src="assets/img/blog/blog-post-5-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">Every seed years second</a>
-                                    <p class="card-text">Winged fill female abundantly us, sixth our air creepeth dominion upon.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="marketing">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Marketing</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">Air place were said saying</a>
-                                    <p class="card-text">That waters can't his night very day second, great is over cattle.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="" target="_self">Voir plus</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="business">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Business</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">And moving above</a>
-                                    <p class="card-text">Divide gathering unto creepeth don't moving it grass deep void.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="architecture">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Architecture</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">Thing had said don't thing</a>
-                                    <p class="card-text">After Green beginning sixth saying lesser beast dominion hath male.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" isotope-item col-12 col-md-6 col-lg-4" data-filters="business">
-                            <!-- Blog-->
-                            <div class="card card-blog  card-vertical card-hover-zoom card-blog-bordered rounded-4 overflow-hidden bg-white"><a class="card-img rounded-0" href="" data-img-height style="--img-height: 72%;"><span class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Business</span><img loading="lazy" src="assets/img/blog/blog-post-4-900x800.jpg" alt=""></a>
-                                <div class="card-body py-40 px-50 pb-50"><a class="card-title h4" href="">Stars seasons third lesser</a>
-                                    <p class="card-text">Meat place fly you'll meat you that you'll firmament creature fowl.</p><!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="/demande" target="_self">Faite une demande</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- <div class="text-center mt-80">
-                        <!-- Button--><a class="btn btn-light" href="#" target="_self">Load more</a>
-                    </div> --}}
+<div class="pt-120 pb-130 bg-gray-light callToActionPrev">
+        <div class="container">
+            <div class="row mb-90">
+                <div class="col-lg-4 offset-lg-4 text-center"><span class="badge bg-light text-dark mb-20" data-show="startbox">Services</span>
+                    <h4 class="m-0" data-show="startbox" data-show-delay="100">Trouvez le prestataire ideale à vos besions</h4>
                 </div>
             </div>
+            <div class="row gy-30">
+                <div class="col-12 col-md-6 col-lg-4" data-show="startbox" data-show-delay="400">
+                    <!-- Service case-->
+                    <div class="service-case lift rounded-4 bg-white shadow overflow-hidden"><a class="service-case-image"
+                            href="/detailservice" data-img-height style="--img-height: 64%;"><img loading="lazy"
+                                src="assets/img/service-case-5-740x480.jpg" alt=""></a>
+                        <div class="service-case-body position-relative">
+                            <!-- Circle icon-->
+                            <div
+                                class="circle-icon circle-icon-sm text-white bg-accent-1 position-absolute me-50 top-0 end-0 translate-middle-y">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none">
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M12.5 0h-10A2.5 2.5 0 0 0 0 2.5v20A2.5 2.5 0 0 0 2.5 25h15a2.5 2.5 0 0 0 2.5-2.5v-15L12.5 0ZM5 7.75a1 1 0 1 0 0 2h2.5a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Z"
+                                        clip-rule="evenodd" />
+                                </svg></div>
+                            <h4 class="service-case-title mb-15">Project Management</h4>
+                            <a class="service-case-arrow stretched-link" href="service-single.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                                    <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            <div class="text-center mt-80">
+                {{-- <div data-show="startbox">
+                    <!-- Button--><a class="btn btn-light" href="services-01.html" target="_self">All Services</a>
+                </div> --}}
+            </div>
         </div>
-
-        <table class="table border-stripped container" border="1"><thead>
-            <th>ID </th>
-            <th>date </th>
-            <th>Numero</th>
-            <th>montant </th>
-            <th>numero de demande</th>
-            <th>prestataire </th>
-        </thead>
-
-        <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tbody>
-        </table>
+    </div>
 
 @endsection

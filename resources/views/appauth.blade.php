@@ -45,17 +45,18 @@
                 </svg></a><a class="navbar-toggle order-4 popup-inline"
                 href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
             <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/listeservice"><span>Services</span></a>
+
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Service</span></a>
 
                 </li>
                 <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Mes demandes</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/pay"><span>paiement</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Notification</span></a>
 
                 </li>
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/register"><span>Mes informations</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href=""><span>compte</span></a>
 
                 </li>
 
@@ -107,6 +108,7 @@
                 </ul>
             </div>
             <div class="navbar-footer">
+
                 <!-- Contacts-->
                 {{-- <ul class="list-group borderless font-size-15">
                     <li class="list-group-item">Email: <a href="mailto:help@startbox.com">help@startbox.com</a></li>
@@ -134,6 +136,7 @@
     </div><!-- Topbar-->
     <div class="navbar navbar-topbar navbar-expand-xl navbar-dark navbar-absolute top-0 d-none d-xl-flex">
         <div class="container">
+
             <!-- Language switcher-->
             {{-- <ul class="nav navbar-nav me-100 nav-no-opacity">
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">English<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" fill="none">

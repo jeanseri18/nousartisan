@@ -20,8 +20,12 @@
     <link rel="stylesheet" href="assets/vendors/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/vendors/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/main.css"><!-- endbuild -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery-->
     <script src="assets/vendors/js/jquery.min.js"></script>
+
 </head>
 
 <body class=" has-topbar">
@@ -48,7 +52,7 @@
                 <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Acceuil</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Services</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/listeservice"><span>Services</span></a>
 
                 </li>
                 <li class="nav-item navbar-dropdown"><a class="nav-link" href="/registerpresta"><span>Devenir
@@ -56,7 +60,10 @@
 
                 </li>
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/register"><span>S'incrire</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/register"><span>Inscription</span></a>
+
+                </li>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/login"><span>Connexion</span></a>
 
                 </li>
 
@@ -64,7 +71,7 @@
 
             </ul><!-- Button--><a
                 class="btn d-none d-sm-inline-flex btn btn-sm btn-accent-1 ms-auto ms-lg-60 me-30 me-lg-0 order-2 order-lg-3"
-                href="/login" target="_self">Se connecter</a>
+                href="" target="_self">Demander une prestation</a>
         </div>
     </nav><!-- Navbar mobile-->
     <div class="navbar navbar-mobile navbar-mobile-style-1 bg-white mfp-hide" id="navbar-mobile-style-1">
@@ -224,6 +231,7 @@
     </footer>
     <!-- Vendors-->
     <!-- build:js -->
+
     <script src="assets/vendors/js/bootstrap.js"></script>
     <script src="assets/vendors/js/imagesloaded.pkgd.js"></script>
     <script src="assets/vendors/js/isotope.pkgd.js"></script>
@@ -243,6 +251,7 @@
     <script src="assets/js/controllers/stretch-column.js"></script>
     <script src="assets/js/controllers/swiper.js"></script>
     <script src="assets/js/controllers/others.js"></script><!-- endbuild -->
+
 </body>
 
 

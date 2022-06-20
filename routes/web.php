@@ -20,6 +20,9 @@ Route::get('/detailservice', function () {
     return view('sousservice');
 });
 
+Route::get('/servicesingle', function () {
+    return view('servicesingle');
+});
 Route::get('/listeservice', function () {
     return view('service');
 });
@@ -35,6 +38,9 @@ Route::get('/clientit', function () {
 Route::get('/demande', function () {
     return view('demande');
 });
+Route::get('/mesdemande', function () {
+    return view('mesdemande');
+});
 
 Route::get('/register', function () {
     return view('register');
@@ -44,4 +50,8 @@ Route::get('/registerpresta', function () {
 });
 Route::get('/pay', function () {
     return view('pay');
+});
+
+Route::get('/detaildemande', function () {
+    return view('detaildemande');
 });
