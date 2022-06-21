@@ -1,4 +1,4 @@
-@extends('app')
+@extends('welcome.app')
 @section('content')
     <div class="swiper bg-dark" data-swiper-slides="1" data-swiper-speed="1000" data-swiper-grabcursor="true"
         data-swiper-parallax="true" data-swiper-pagination="true">
@@ -248,20 +248,21 @@
             <div class="row gy-30">
 
                 <!-- Service case-->
-
+                @foreach ($categories as $categorie)
                 <div class="col-12 col-md-6 col-lg-4" data-show="startbox" data-show-delay="400">
                     <!-- Service case-->
                     <div class="service-case lift rounded-4 bg-white shadow overflow-hidden"><a class="service-case-image"
-                            href="" data-img-height style="--img-height: 64%;"><img loading="lazy"
-                                src="assets/img/service-case-5-740x480.jpg" alt=""></a>
+                            href="{{ route('services',['id'=> $categorie->id]) }}" data-img-height style="--img-height: 64%;"><img loading="lazy"
+                                src="{{ $categorie->image }}" alt=""></a>
                         <div class="service-case-body position-relative">
                             <!-- Circle icon-->
 
-                            <h4 class="service-case-title mb-15">Project Management</h4>
+                           <center> <h4 class="service-case-title mb-15">{{ $categorie->name }}</h4></center>
                             <a class="service-case-arrow stretched-link" href=""></a>
                         </div>
                     </div>
                 </div>
+                @endforeach
 
             </div>
             <div class="text-center mt-80">

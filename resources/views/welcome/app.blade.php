@@ -52,18 +52,18 @@
                 <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Acceuil</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/listeservice"><span>Services</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/categorie"><span>Services</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/registerpresta"><span>Devenir
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/registerpro"><span>Devenir
                             prestataire</span></a>
 
                 </li>
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/register"><span>Inscription</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/register"><span>Inscription</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/login"><span>Connexion</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/login"><span>Connexion</span></a>
 
                 </li>
 
@@ -71,7 +71,7 @@
 
             </ul><!-- Button--><a
                 class="btn d-none d-sm-inline-flex btn btn-sm btn-accent-1 ms-auto ms-lg-60 me-30 me-lg-0 order-2 order-lg-3"
-                href="" target="_self">Demander une prestation</a>
+                href="/welcome/categorie" target="_self">Demander une prestation</a>
         </div>
     </nav><!-- Navbar mobile-->
     <div class="navbar navbar-mobile navbar-mobile-style-1 bg-white mfp-hide" id="navbar-mobile-style-1">
@@ -94,23 +94,24 @@
                     href="#"><span></span><span></span><span></span></a></div>
             <div class="navbar-body">
                 <ul class="nav navbar-nav navbar-nav-collapse">
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href=""><span>Acceuil</span></a>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Acceuil</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href=""><span>Services</span></a>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/categorie"><span>Services</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/registerpresta"><span>Devenir
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/registerpro"><span>Devenir
                                 prestataire</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link"
-                            href=""><span>S'incrire</span></a>
+
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/register"><span>Inscription</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href=""><span>Contact</span></a>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/login"><span>Connexion</span></a>
 
                     </li>
+
 
                 </ul>
             </div>

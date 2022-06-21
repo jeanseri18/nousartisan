@@ -13,9 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',  [App\Http\Controllers\WelcomeController::class, 'index']);
+Route::controller(App\Http\Controllers\WelcomeController::class)->group(function(){
+    Route::get('/welcome/services/{id}',  'services')->name('services');
+    Route::get('/welcome/categorie/',  'categories')->name('categories');
+    Route::get('/welcome/form/{id}/{name}',  'formrequest')->name('formrequest');
+    Route::get('/welcome/registerpro',  'registerpro')->name('registerproform');
+    Route::get('/welcome/register',  'register')->name('registerform');
+    Route::get('/welcome/login',  'login')->name('loginform');
 });
+
+
+
 Route::get('/detailservice', function () {
     return view('sousservice');
 });
@@ -92,3 +101,5 @@ Route::resource('serviceProposals', App\Http\Controllers\ServiceProposalControll
 
 
 Route::resource('userRoles', App\Http\Controllers\UserRoleController::class);
+
+
