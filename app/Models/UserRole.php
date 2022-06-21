@@ -21,7 +21,7 @@ class UserRole extends Model
     use HasFactory;
 
     public $table = 'user_roles';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -48,8 +48,16 @@ class UserRole extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * Get all of the users for the UserRole
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkersTable extends Migration
+class CreateCustomersTable extends Migration
 {
 
     /**
@@ -14,17 +14,16 @@ class CreateWorkersTable extends Migration
      */
     public function up()
     {
-        Schema::create('workers', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('number_siren')->nullable();
-            $table->string('name')->nullable();
-            $table->string('number_tva')->nullable();
-            $table->string('owner_number')->nullable();
-            $table->string('owner_name')->nullable();
+            $table->unsignedBigInteger("user_role_id")->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
             $table->string('email')->nullable();
-            $table->string('tel')->nullable();
-            $table->string('password')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('adresse_facturation')->nullable();
+            $table->string('adress2')->nullalble();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -37,6 +36,6 @@ class CreateWorkersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('workers');
+        Schema::drop('customers');
     }
 }

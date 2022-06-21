@@ -23,7 +23,7 @@ class Status extends Model
     use HasFactory;
 
     public $table = 'statuses';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -54,8 +54,25 @@ class Status extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * Get all of the service_proposal for the Status
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function service_proposals()
+    {
+        return $this->hasMany(ServiceProposal::class);
+    }
+    /**
+     * Get all of the service_request for the Status
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function service_requests()
+    {
+        return $this->hasMany(ServiceProposal::class);
+    }
 }

@@ -31,3 +31,7 @@
     <a class="nav-link" href="{{ route('userRoles.index') }}"><i class="fas fa-building"></i><span>User Roles</span></a>
 </li>
 
+<li class="side-menus {{ Request::is('customers*') ? 'active' : '' }}">
+    <a class="nav-link" href="{{ route('customers.index') }}"><i class="fas fa-building"></i><span>Customers</span></a>
+</li>
+
