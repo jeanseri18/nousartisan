@@ -27,7 +27,7 @@ class ServiceOfBenefitCategory extends Model
     use HasFactory;
 
     public $table = 'service_of_benefit_categories';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -66,8 +66,16 @@ class ServiceOfBenefitCategory extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * Get the benefit_category that owns the ServiceOfBenefitCategory
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function benefit_category(): BelongsTo
+    {
+        return $this->belongsTo(BenefitCategory::class);
+    }
 }

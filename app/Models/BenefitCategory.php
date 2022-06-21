@@ -22,7 +22,7 @@ class BenefitCategory extends Model
     use HasFactory;
 
     public $table = 'benefit_categories';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -51,8 +51,16 @@ class BenefitCategory extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * Get all of the services_of_benefit_category for the BenefitCategory
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function services_of_benefit_category()
+    {
+        return $this->hasMany(ServiceOfBenefitCategory::class);
+    }
 }

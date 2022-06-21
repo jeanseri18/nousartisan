@@ -23,7 +23,7 @@ class ServiceProposal extends Model
     use HasFactory;
 
     public $table = 'service_proposals';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -54,8 +54,16 @@ class ServiceProposal extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    /**
+     * Get the status that owns the ServiceProposal
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }

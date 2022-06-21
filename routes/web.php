@@ -103,3 +103,4 @@ Route::resource('serviceProposals', App\Http\Controllers\ServiceProposalControll
 Route::resource('userRoles', App\Http\Controllers\UserRoleController::class);
 
 
+Route::resource('customers', App\Http\Controllers\CustomerController::class);

@@ -38,3 +38,6 @@ Route::resource('service_proposals', App\Http\Controllers\API\ServiceProposalAPI
 
 
 Route::resource('user_roles', App\Http\Controllers\API\UserRoleAPIController::class);
+
+
+Route::resource('customers', App\Http\Controllers\API\CustomerAPIController::class);
