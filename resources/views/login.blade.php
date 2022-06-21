@@ -14,17 +14,7 @@
                 <p class="mb-40 font-size-18 fw-medium text-white pe-lg-70">Text detail.</p><!-- Button--><a class="btn text-white btn-link btn-clean" href="#" target="_self">En savoir plus</a>
             </div>
             <div class="col-lg-5">
-                <form class="ms-lg-70 rounded bg-white p-35 text-center"><br>
-                    <h4 class="mb-30">Nousartisans</h4><br>
-
-                    <input class="form-control form-control-style-2 mt-13" type="text" placeholder=" Email *">
-<br>
-
-                    <input class="form-control form-control-style-2 mt-13" type="email" placeholder=" Mot de passe  *">
-
-                  <br>
-            <!-- Button--><button class="btn btn-accent-1">Connexion</button><br>
-                </form>
+                @livewire('customers.login-form')
             </div>
         </div>
     </div>
