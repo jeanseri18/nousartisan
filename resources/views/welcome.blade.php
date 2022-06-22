@@ -1,4 +1,4 @@
-@extends('app')
+@extends('welcome.app')
 @section('content')
     <div class="swiper bg-dark" data-swiper-slides="1" data-swiper-speed="1000" data-swiper-grabcursor="true"
         data-swiper-parallax="true" data-swiper-pagination="true">
@@ -246,6 +246,7 @@
                 </div>
             </div>
             <div class="row gy-30">
+                
 
                 <!-- Service case-->
 

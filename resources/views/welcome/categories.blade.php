@@ -17,26 +17,18 @@
                     <!-- Service case-->
                     <div class="service-case lift rounded-4 bg-white shadow overflow-hidden"><a class="service-case-image"
                             href="{{ route('services',['id'=> $categorie->id]) }}" data-img-height style="--img-height: 64%;"><img loading="lazy"
-                                src="{{$categorie->image}}" alt=""></a>
+                                src="\{{$categorie->image }}" alt=""></a>
                         <div class="service-case-body position-relative">
                             <!-- Circle icon-->
-                            <div
-                                class="circle-icon circle-icon-sm text-white bg-accent-1 position-absolute me-50 top-0 end-0 translate-middle-y">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none">
-                                    <path fill="currentColor" fill-rule="evenodd"
-                                        d="M12.5 0h-10A2.5 2.5 0 0 0 0 2.5v20A2.5 2.5 0 0 0 2.5 25h15a2.5 2.5 0 0 0 2.5-2.5v-15L12.5 0ZM5 7.75a1 1 0 1 0 0 2h2.5a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Zm0 5a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H5Z"
-                                        clip-rule="evenodd" />
-                                </svg></div>
-                            <h4 class="service-case-title mb-15">{{$categorie->name}}</h4>
-                            <a class="service-case-arrow stretched-link" href="service-single.html"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
-                                    <path stroke="currentColor" stroke-width="1.7" d="M0 7h18m0 0-6.75-6M18 7l-6.75 6" />
-                                </svg></a>
+
+                           <center> <h4 class="service-case-title mb-15">{{ $categorie->name }}</h4></center>
+                            <a class="service-case-arrow stretched-link" href=""></a>
                         </div>
                     </div>
-                </div>  @endforeach
+        
+                </div> @endforeach
 
         </div>
-    </div>
+    </div><br><br>
 
 @endsection

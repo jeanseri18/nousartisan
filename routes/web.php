@@ -13,14 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',  [App\Http\Controllers\WelcomeController::class, 'index']);
+
 Route::controller(App\Http\Controllers\WelcomeController::class)->group(function(){
+    Route::get('/', 'index');
     Route::get('/welcome/services/{id}',  'services')->name('services');
     Route::get('/welcome/categorie/',  'categories')->name('categories');
     Route::get('/welcome/form/{id}/{name}',  'formrequest')->name('formrequest');
     Route::get('/welcome/registerpro',  'registerpro')->name('registerproform');
     Route::get('/welcome/register',  'register')->name('registerform');
     Route::get('/welcome/login',  'login')->name('loginform');
+});
+
+Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(function(){
+    Route::get('/customerhome', 'index');
+    Route::get('/customerhome/myrequests', 'myrequest');
+    Route::get('/customerhome/myprofil', 'myprofil');
+    Route::get('/customerhome/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
 });
 
 
