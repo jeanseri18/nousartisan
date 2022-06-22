@@ -47,7 +47,7 @@ class WorkerHomeController extends Controller
 
     return view('workershome.profile',$data);
     }
-
+  
        /**
      * Display a listing of the resource.
      *

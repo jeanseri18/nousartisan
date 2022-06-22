@@ -13,15 +13,15 @@
     <meta name="description" content="Startbox">
     <meta name="author" content="RunWebRun">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
-    <link rel="icon" type="image/png" href="{{asset('assets/img/root/favicon.png')}}"><!-- Fonts-->
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/root/favicon.png') }}"><!-- Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
     <!-- Style-->
     <!-- build:css -->
-    <link rel="stylesheet" href="{{asset('assets/vendors/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/vendors/css/swiper-bundle.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}"><!-- endbuild -->
+    <link rel="stylesheet" href="{{ asset('assets/vendors/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/css/swiper-bundle.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"><!-- endbuild -->
     <!-- jQuery-->
-    <script src="{{asset('assets/vendors/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/vendors/js/jquery.min.js') }}"></script>
 
 </head>
 
@@ -47,16 +47,24 @@
                 href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
             <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome"><span>Service</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/worker-home"><span>Service</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myrequests"><span>Mes offres</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/worker-home/myoffer"><span>Mes
+                            offres</span></a>
 
                 </li>
-              
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myprofil"><span>Mon compte</span></a>
 
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="#"><span>Mon
+                            compte</span></a>
+                            <div class="dropdown-menu rounded-2 shadow">
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="/worker-home/myprofil"><span>Mon profil</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/worker-home/abonnement"><span>Abonnement</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/worker-home/payment"><span>Paiement</span></a></li>
+                                </ul>
+                            </div>
                 </li>
 
 
@@ -86,14 +94,22 @@
                     href="#"><span></span><span></span><span></span></a></div>
             <div class="navbar-body">
                 <ul class="nav navbar-nav navbar-nav-collapse">
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome"><span>Service</span></a>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link"
+                            href="/worker-home"><span>Services</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myrequests"><span>Mes offres</span></a>
+
+
+
+                    </li>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/worker-home/myoffer"><span>Mes
+                                offres</span></a>
 
                     </li>
 
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myprofil"><span>Mon compte</span></a>
+
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/worker-home/myprofil"><span>Mon
+                                compte</span></a>
 
                     </li>
 
@@ -122,25 +138,25 @@
     </footer> --}}
     <!-- Vendors-->
     <!-- build:js -->
-    <script src="{{asset('assets/vendors/js/bootstrap.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/imagesloaded.pkgd.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/isotope.pkgd.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jarallax.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jarallax-element.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jquery.countdown.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jquery.magnific-popup.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/ofi.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jquery.inview.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/swiper-bundle.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/gist-embed.min.js')}}"></script>
-    <script src="{{asset('assets/js/helpers.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/show-on-scroll.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/countdown.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/isotope.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/navbar.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/stretch-column.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/swiper.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/others.js')}}"></script><!-- endbuild -->
+    <script src="{{ asset('assets/vendors/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/imagesloaded.pkgd.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/isotope.pkgd.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/jarallax.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/jarallax-element.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/jquery.countdown.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/jquery.magnific-popup.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/ofi.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/jquery.inview.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/swiper-bundle.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/gist-embed.min.js') }}"></script>
+    <script src="{{ asset('assets/js/helpers.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/show-on-scroll.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/countdown.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/isotope.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/navbar.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/stretch-column.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/swiper.js') }}"></script>
+    <script src="{{ asset('assets/js/controllers/others.js') }}"></script><!-- endbuild -->
 </body>
 
 

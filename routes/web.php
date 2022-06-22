@@ -37,7 +37,6 @@ Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(funct
     Route::get('/worker-home/myprofil', 'myprofil');
     Route::get('/worker-home/payment', 'payment');
     Route::get('/worker-home/abonnement', 'abonnement');
-
 });
 
 Route::get('/detailservice', function () {
