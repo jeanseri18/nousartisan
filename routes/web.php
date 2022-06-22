@@ -44,9 +44,6 @@ Route::get('/listeservice', function () {
     return view('service');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
 
 Route::get('/clientit', function () {
     return view('clientit');
@@ -59,9 +56,7 @@ Route::get('/mesdemande', function () {
     return view('mesdemande');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+
 Route::get('/registerpresta', function () {
     return view('registerpresta');
 });
@@ -78,37 +73,38 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 
-Route::resource('workers', App\Http\Controllers\WorkerController::class);
+route::prefix("administration")->group(function(){
+    Route::resource('benefitCategories', App\Http\Controllers\BenefitCategoryController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('serviceOfBenefitCategories', App\Http\Controllers\ServiceOfBenefitCategoryController::class);
 
-Auth::routes();
+    Route::resource('serviceRequests', App\Http\Controllers\ServiceRequestController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('statuses', App\Http\Controllers\StatusController::class);
 
-Auth::routes();
+    Route::resource('serviceProposals', App\Http\Controllers\ServiceProposalController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('userRoles', App\Http\Controllers\UserRoleController::class);
 
-Auth::routes();
+    Route::resource('customers', App\Http\Controllers\CustomerController::class);
 
+    Route::resource('workers', App\Http\Controllers\WorkerController::class);
 
-Route::resource('benefitCategories', App\Http\Controllers\BenefitCategoryController::class);
-
-
-Route::resource('serviceOfBenefitCategories', App\Http\Controllers\ServiceOfBenefitCategoryController::class);
-
-
-Route::resource('serviceRequests', App\Http\Controllers\ServiceRequestController::class);
+});
 
 
-Route::resource('statuses', App\Http\Controllers\StatusController::class);
+
+Route::get('/login-customers', function () {
+    return view('login');
+})->name('customers.login');
 
 
-Route::resource('serviceProposals', App\Http\Controllers\ServiceProposalController::class);
+Route::get('/register-customers', function () {
+    return view('register');
+})->name('customers.register');
 
+Route::get('/customer-home', function () {
+    //TODO customer home  must be create page
+    return view('register');
+})->name('customers.home');
 
-Route::resource('userRoles', App\Http\Controllers\UserRoleController::class);
-
-
-Route::resource('customers', App\Http\Controllers\CustomerController::class);

@@ -34,7 +34,7 @@ class ServiceRequest extends Model
     use HasFactory;
 
     public $table = 'service_requests';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -87,8 +87,12 @@ class ServiceRequest extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }

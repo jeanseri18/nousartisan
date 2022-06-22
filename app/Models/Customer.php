@@ -25,13 +25,14 @@ class Customer extends Model
     use HasFactory;
 
     public $table = 'customers';
-    
+
 
     protected $dates = ['deleted_at'];
 
 
 
     public $fillable = [
+        'name',
         'firstname',
         'lastname',
         'email',
@@ -60,8 +61,8 @@ class Customer extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+
 }
