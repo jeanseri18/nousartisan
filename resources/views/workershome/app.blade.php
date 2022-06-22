@@ -47,15 +47,15 @@
                 href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
             <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/customerhome"><span>Service</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome"><span>Service</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/customerhome/myrequests"><span>Mes demandes</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myrequests"><span>Mes offres</span></a>
 
                 </li>
+              
 
-
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/customerhome/myprofil"><span>Mon compte</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myprofil"><span>Mon compte</span></a>
 
                 </li>
 
@@ -63,7 +63,7 @@
 
             </ul><!-- Button--><a
                 class="btn d-none d-sm-inline-flex btn btn-sm btn-accent-1 ms-auto ms-lg-60 me-30 me-lg-0 order-2 order-lg-3"
-                href="/login" target="_self">Se deconnecter</a>
+                href="/" target="_self">Se deconnecter</a>
         </div>
     </nav><!-- Navbar mobile-->
     <div class="navbar navbar-mobile navbar-mobile-style-1 bg-white mfp-hide" id="navbar-mobile-style-1">
@@ -86,18 +86,16 @@
                     href="#"><span></span><span></span><span></span></a></div>
             <div class="navbar-body">
                 <ul class="nav navbar-nav navbar-nav-collapse">
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome"><span>Service</span></a>
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/customerhome"><span>Service</span></a>
+                    </li>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myrequests"><span>Mes offres</span></a>
 
-                </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/customerhome/myrequests"><span>Mes demandes</span></a>
+                    </li>
 
-                </li>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/workershome/myprofil"><span>Mon compte</span></a>
 
-
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/customerhome/myprofil"><span>Mon compte</span></a>
-
-                </li>
+                    </li>
 
                 </ul>
             </div>

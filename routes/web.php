@@ -31,7 +31,14 @@ Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(fun
     Route::get('/customerhome/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
 });
 
+Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
+    Route::get('/worker-home', 'index');
+    Route::get('/worker-home/myoffer', 'myoffer');
+    Route::get('/worker-home/myprofil', 'myprofil');
+    Route::get('/worker-home/payment', 'payment');
+    Route::get('/worker-home/abonnement', 'abonnement');
 
+});
 
 Route::get('/detailservice', function () {
     return view('sousservice');
@@ -107,4 +114,3 @@ Route::get('/customer-home', function () {
     //TODO customer home  must be create page
     return view('register');
 })->name('customers.home');
-
