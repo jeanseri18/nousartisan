@@ -93,14 +93,16 @@
                             <input class="form-control form-control-style-2 " type="number" placeholder="prix par heure">
                         </div>
                     </div><br>
-                    Le montant de la prestation est de 100 pour 10 heure de travail
-                    <br><br>
-                    Frais de servuces<br><br>
-                    Frais de service TTC<br><br>
-                    Montant  HT<br><br>
-                    La TVA est defini par le prestataire<br><br>
+                       {{-- Le montant de la prestation est de 100 pour 10 heure de travail
+                        <br> --}}
+                        <br>
+                        Frais de services <b><span  id="fs"></span></b><br><br>
+                        Frais de services TVA <b><span id="fstva"></span></b><br><br>
+                        Frais de service TTC <b> <span id="fsttc"></span></b><br><br>
+                        Montant HT <b><span id="mht"></span></b><br><br>
+                        La TVA est defini par le prestataire<br><br>
 
-                    Montant total<br><br>
+                        Montant total <b><span id="mt"></span></b><br><br>
 
                     <button class="btn btn-accent-1">Valider</button>
                 </form>
@@ -114,3 +116,21 @@
 </div>
 
 @endsection
+@push('script')
+    <script>
+        function calcul() {
+            var dure = document.getElementById('dure').value;
+            var prix = document.getElementById('prix').value;
+            var rest = prix * dure;
+            var frais = rest * 0.07;
+            var fraistva = rest * 0.014;
+            var fraisttc = frais + fraistva;
+            var monttotal = rest + fraisttc;
+            document.getElementById('fs').innerHTML = frais.toFixed(2);
+            document.getElementById('fstva').innerHTML = fraistva.toFixed(2);
+            document.getElementById('fsttc').innerHTML = fraisttc.toFixed(2);
+            document.getElementById('mht').innerHTML = rest;
+            document.getElementById('mt').innerHTML = monttotal.toFixed(2);
+        }
+    </script>
+@endpush

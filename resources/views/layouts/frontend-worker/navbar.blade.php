@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
-<head>
-    <meta charset="utf-8">
-    <title>Startbox | Home 01</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Startbox">
-    <meta name="author" content="RunWebRun">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Favicon-->
-    <link rel="icon" type="image/png" href="assets/img/root/favicon.png"><!-- Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
-    <!-- Style-->
-    <!-- build:css -->
-    <link rel="stylesheet" href="{{asset('assets/vendors/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/vendors/css/swiper-bundle.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}"><!-- endbuild -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- jQuery-->
-    <script src="{{asset('assets/vendors/js/jquery.min.js')}}"></script>
-
-</head>
-
-<body class=" has-topbar">
-    <!-- Header-->
+  <!-- Header-->
     <!-- Navbar top-->
     <nav class="navbar navbar-expand-lg navbar-top  bg-white">
         <div class="container"><a class="navbar-brand" href="index-2.html"><svg xmlns="http://www.w3.org/2000/svg"
@@ -46,29 +18,32 @@
                 </svg></a><a class="navbar-toggle order-4 popup-inline"
                 href="#navbar-mobile-style-1"><span></span><span></span><span></span></a>
             <ul class="nav navbar-nav order-2 ms-auto nav-no-opacity">
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Acceuil</span></a>
+
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="{{url('/worker-home')}}"><span>Service</span></a>
 
                 </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/categorie"><span>Services</span></a>
-
-                </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/registerpro"><span>Devenir
-                            prestataire</span></a>
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="{{url('/worker-home/myoffer')}}"><span>Mes
+                            offres</span></a>
 
                 </li>
 
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/register"><span>Inscription</span></a>
 
-                </li>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/login"><span>Connexion</span></a>
-
+                <li class="nav-item navbar-dropdown"><a class="nav-link" href="#"><span>Mon
+                            compte</span></a>
+                            <div class="dropdown-menu rounded-2 shadow">
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="{{url('/worker-home/myprofil')}}"><span>Mon profil</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{url('/worker-home/abonnement')}}"><span>Abonnement</span></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{url('/worker-home/payment')}}"><span>Paiement</span></a></li>
+                                </ul>
+                            </div>
                 </li>
 
 
 
             </ul><!-- Button--><a
                 class="btn d-none d-sm-inline-flex btn btn-sm btn-accent-1 ms-auto ms-lg-60 me-30 me-lg-0 order-2 order-lg-3"
-                href="/welcome/categorie" target="_self">Demander une prestation</a>
+                href="/" target="_self">Se deconnecter</a>
         </div>
     </nav><!-- Navbar mobile-->
     <div class="navbar navbar-mobile navbar-mobile-style-1 bg-white mfp-hide" id="navbar-mobile-style-1">
@@ -91,28 +66,33 @@
                     href="#"><span></span><span></span><span></span></a></div>
             <div class="navbar-body">
                 <ul class="nav navbar-nav navbar-nav-collapse">
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/"><span>Acceuil</span></a>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="{{url('/worker-home')}}"><span>Service</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/categorie"><span>Services</span></a>
-
-                    </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/registerpro"><span>Devenir
-                                prestataire</span></a>
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="{{url('/worker-home/myoffer')}}"><span>Mes
+                                offres</span></a>
 
                     </li>
 
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/register"><span>Inscription</span></a>
 
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="#"><span>Mon
+                                compte</span></a>
+                                <div class="dropdown-menu rounded-2 shadow">
+                                    <ul class="nav navbar-nav">
+                                        <li class="nav-item"><a class="nav-link" href="{{url('/worker-home/myprofil')}}"><span>Mon profil</span></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{{url('/worker-home/abonnement')}}"><span>Abonnement</span></a></li>
+                                        <li class="nav-item"><a class="nav-link" href="{{url('/worker-home/payment')}}"><span>Paiement</span></a></li>
+                                    </ul>
+                                </div>
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/login"><span>Connexion</span></a>
 
-                    </li>
+
 
 
                 </ul>
             </div>
             <div class="navbar-footer">
+
 
             </div>
         </div>
@@ -120,34 +100,7 @@
     <div class="navbar navbar-topbar navbar-expand-xl navbar-dark navbar-absolute top-0 d-none d-xl-flex">
         <div class="container">
 
+
+
         </div>
-    </footer>
-    <!-- Vendors-->
-    <!-- build:js -->
-
-    <script src="{{asset('assets/vendors/js/bootstrap.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/imagesloaded.pkgd.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/isotope.pkgd.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jarallax.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jarallax-element.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jquery.countdown.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jquery.magnific-popup.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/ofi.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/jquery.inview.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/swiper-bundle.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/gist-embed.min.js')}}"></script>
-    <script src="{{asset('assets/js/helpers.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/show-on-scroll.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/countdown.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/isotope.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/navbar.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/stretch-column.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/swiper.js')}}"></script>
-    <script src="{{asset('assets/js/controllers/others.js')}}"></script><!-- endbuild -->
-
-</body>
-
-@stack('script')
-<!-- Mirrored from runwebrun.com/startbox/home-01.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jun 2022 16:09:47 GMT -->
-
-</html>
+    </div>

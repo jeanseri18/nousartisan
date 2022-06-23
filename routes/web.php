@@ -25,10 +25,11 @@ Route::controller(App\Http\Controllers\WelcomeController::class)->group(function
 });
 
 Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(function(){
-    Route::get('/customerhome', 'index');
-    Route::get('/customerhome/myrequests', 'myrequest');
-    Route::get('/customerhome/myprofil', 'myprofil');
-    Route::get('/customerhome/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
+    Route::get('/customer-home/service', 'index');
+    Route::get('/customer-home/myrequests', 'myrequest');
+    Route::get('/customer-home/myprofil', 'myprofil');
+    Route::get('/customer-home/payment', 'payment');
+    Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
 });
 
 Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
