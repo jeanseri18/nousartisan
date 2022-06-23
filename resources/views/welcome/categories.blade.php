@@ -17,7 +17,7 @@
                     <!-- Service case-->
                     <div class="service-case lift rounded-4 bg-white shadow overflow-hidden"><a class="service-case-image"
                             href="{{ route('services',['id'=> $categorie->id]) }}" data-img-height style="--img-height: 64%;"><img loading="lazy"
-                                src="\{{$categorie->image }}" alt=""></a>
+                                src="{{$categorie->image }}" alt=""></a>
                         <div class="service-case-body position-relative">
                             <!-- Circle icon-->
 
@@ -25,7 +25,7 @@
                             <a class="service-case-arrow stretched-link" href=""></a>
                         </div>
                     </div>
-        
+
                 </div> @endforeach
 
         </div>

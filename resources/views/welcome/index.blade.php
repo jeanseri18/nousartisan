@@ -311,7 +311,7 @@
     <BR><BR>
     <div class="container">
         <h2>Missions fraichement déposées</h2>
-        <a href="/detaildemande" class="article cl2 shad brc6 brc1solid p20 grid1 jc-between "
+        <a href="" class="article cl2 shad brc6 brc1solid p20 grid1 jc-between "
             style=" text-decoration:none;">
             <div class="card card-blog  col-md-4 " style="background-color: #d5d5d5">
                 <div class="user_info mb10 container "><br>
