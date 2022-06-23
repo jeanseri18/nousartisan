@@ -27,7 +27,6 @@ Route::controller(App\Http\Controllers\WelcomeController::class)->group(function
 Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(function(){
     Route::get('/customer-home', 'index')->name('customers.home');
     Route::get('/customer-home/myrequests', 'myrequest');
-
     Route::get('/customer-home/myprofil', 'myprofil');
     Route::get('/customer-home/payment', 'payment');
     Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');

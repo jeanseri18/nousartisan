@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery-->
     <script src="{{asset('assets/vendors/js/jquery.min.js')}}"></script>
-
+    @livewireStyles
 </head>
 
 <body class=" has-topbar">
@@ -39,7 +39,7 @@
 
     <!-- Vendors-->
     <!-- build:js -->
-    
+
 
     <script src="{{asset('assets/vendors/js/bootstrap.js')}}"></script>
     <script src="{{asset('assets/vendors/js/imagesloaded.pkgd.js')}}"></script>
@@ -60,7 +60,7 @@
     <script src="{{asset('assets/js/controllers/stretch-column.js')}}"></script>
     <script src="{{asset('assets/js/controllers/swiper.js')}}"></script>
     <script src="{{asset('assets/js/controllers/others.js')}}"></script><!-- endbuild -->
-
+    @livewireScripts
 </body>
 
 @stack('script')
