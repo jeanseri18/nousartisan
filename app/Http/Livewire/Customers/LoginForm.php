@@ -24,8 +24,8 @@ class LoginForm extends Component
 
             //Get user session
             $customer  = Auth::user();
-            return redirect()->route('customers.home');
 
+            return redirect()->route('customers.home');
         }else{
             $this->no_loggin = true;
         }

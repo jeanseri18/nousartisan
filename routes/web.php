@@ -111,6 +111,5 @@ Route::get('/register-customers', function () {
 })->name('customers.register');
 
 Route::get('/customer-home', function () {
-    //TODO customer home  must be create page
-    return view('register');
+    return view('workershome.index');
 })->name('customers.home');

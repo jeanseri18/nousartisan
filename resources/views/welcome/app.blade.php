@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startbox | Home 01</title>
+    <title>Startbox | @yield('title')</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Startbox">
     <meta name="author" content="RunWebRun">
@@ -100,9 +100,8 @@
                     <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/categorie"><span>Services</span></a>
 
                     </li>
-                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/registerpro"><span>Devenir
-                                prestataire</span></a>
-
+                    <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/registerpro">
+                        <span>Devenir prestataire</span></a>
                     </li>
 
                     <li class="nav-item navbar-dropdown"><a class="nav-link" href="/welcome/register"><span>Inscription</span></a>
