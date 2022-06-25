@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::controller(App\Http\Controllers\WelcomeController::class)->group(function(){
     Route::get('/', 'index');
     Route::get('/welcome/services/{id}',  'services')->name('services');
@@ -25,19 +24,20 @@ Route::controller(App\Http\Controllers\WelcomeController::class)->group(function
 });
 
 Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(function(){
-    Route::get('/customerhome', 'index');
-    Route::get('/customerhome/myrequests', 'myrequest');
-    Route::get('/customerhome/myprofil', 'myprofil');
-    Route::get('/customerhome/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
+    Route::get('/customer-home', 'index')->name('customers.home');
+    Route::get('/customer-home/myrequests', 'myrequest');
+    Route::get('/customer-home/myprofil', 'myprofil');
+    Route::get('/customer-home/payment', 'payment');
+    Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
 });
 
 Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
     Route::get('/worker-home', 'index');
     Route::get('/worker-home/myoffer', 'myoffer');
     Route::get('/worker-home/myprofil', 'myprofil');
+    Route::get('/worker-home/detail-offer', 'detailoffer');
     Route::get('/worker-home/payment', 'payment');
     Route::get('/worker-home/abonnement', 'abonnement');
-
 });
 
 Route::get('/detailservice', function () {
@@ -79,7 +79,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-
 route::prefix("administration")->group(function(){
     Route::resource('benefitCategories', App\Http\Controllers\BenefitCategoryController::class);
 
@@ -110,6 +109,7 @@ Route::get('/register-customers', function () {
     return view('register');
 })->name('customers.register');
 
-Route::get('/customer-home', function () {
-    return view('workershome.index');
-})->name('customers.home');
+// Route::get('/customer-home', function () {
+//     //TODO customer home  must be create page
+//     return view('register');
+// })->name('customers.home');

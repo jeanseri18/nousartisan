@@ -35,6 +35,19 @@ class WorkerHomeController extends Controller
 
     return view('workershome.myoffer',$data);
     }
+
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function detailoffer()
+    {
+    $data['title']='Detail de l offre';
+
+
+    return view('workershome.detailoffer',$data);
+    }
        /**
      * Display a listing of the resource.
      *

@@ -1234,16 +1234,16 @@
         },
         {
             "name": "infyomlabs/laravel-generator",
-            "version": "v4.0.0",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/laravel-generator.git",
-                "reference": "5eb0fb02d6fcb21610831a425924f3151a77429e"
+                "reference": "e5355d68a156f52dc3afca400e48b0fec14cf16c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/5eb0fb02d6fcb21610831a425924f3151a77429e",
-                "reference": "5eb0fb02d6fcb21610831a425924f3151a77429e",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/e5355d68a156f52dc3afca400e48b0fec14cf16c",
+                "reference": "e5355d68a156f52dc3afca400e48b0fec14cf16c",
                 "shasum": ""
             },
             "require": {
@@ -1299,7 +1299,7 @@
             ],
             "support": {
                 "issues": "https://github.com/InfyOmLabs/laravel-generator/issues",
-                "source": "https://github.com/InfyOmLabs/laravel-generator/tree/v4.0.0"
+                "source": "https://github.com/InfyOmLabs/laravel-generator/tree/v4.1.0"
             },
             "funding": [
                 {
@@ -1307,7 +1307,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2022-02-22T06:12:44+00:00"
+            "time": "2022-06-22T08:50:16+00:00"
         },
         {
             "name": "infyomlabs/laravel-generator-helpers",
@@ -6062,16 +6062,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v9.21.0",
+            "version": "v9.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "b8e6663990c3eda7c1c66f4add4f86109cb159cb"
+                "reference": "8f37e59e7ed1c1d2ff713497918bcaee72d587bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/b8e6663990c3eda7c1c66f4add4f86109cb159cb",
-                "reference": "b8e6663990c3eda7c1c66f4add4f86109cb159cb",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/8f37e59e7ed1c1d2ff713497918bcaee72d587bb",
+                "reference": "8f37e59e7ed1c1d2ff713497918bcaee72d587bb",
                 "shasum": ""
             },
             "require": {
@@ -6131,7 +6131,7 @@
             ],
             "support": {
                 "issues": "https://github.com/yajra/laravel-datatables/issues",
-                "source": "https://github.com/yajra/laravel-datatables/tree/v9.21.0"
+                "source": "https://github.com/yajra/laravel-datatables/tree/v9.21.1"
             },
             "funding": [
                 {
@@ -6143,7 +6143,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-06-21T13:31:43+00:00"
+            "time": "2022-06-22T09:21:30+00:00"
         }
     ],
     "packages-dev": [

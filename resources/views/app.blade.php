@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startbox | @yield("title")</title>
+    <title>Nous artisan | @yield("title")</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Startbox">
     <meta name="author" content="RunWebRun">

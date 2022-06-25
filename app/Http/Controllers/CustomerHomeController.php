@@ -48,6 +48,19 @@ class CustomerHomeController extends Controller
     return view('customerhome.myprofil',$data);
     }
 
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function payment()
+    {
+    $data['title']='Mes paiments';
+
+
+    return view('customerhome.payment',$data);
+    }
+
  /**
      * Display a listing of the resource.
      *
