@@ -64,7 +64,7 @@ class WelcomeController extends Controller
     public function formrequest($id ,$name)
     {
     $data['title']='Formulaire de demande';
-    $data['idservice']=$id;
+    $data['idService']=$id;
     $data['name']=$name;
 
 
