@@ -94,7 +94,21 @@ class CustomerHomeController extends Controller
     }
 
 
+   /**
+     * Display a listing of the resource.
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function requestupdate(Request $request,$id)
+    {
+        $data['title']='Modification de la request';
+        $data['myrequests']=ServiceRequest::where('user_id',Auth::id())->where('service_requests.id',$id)->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
+       ->first(['service_requests.*','service_of_benefit_categories.name','service_of_benefit_categories.image']);
+    //    dd($data['myrequests']);
 
+    // session()->flash('messageprofil', 'Vos information ont été modifié avec  succes.');
+    return view('customerhome.update-form',$data);
+    }
 
 
       /**

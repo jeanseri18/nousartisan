@@ -30,6 +30,7 @@ Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(fun
     Route::get('/customer-home/myrequests', 'myrequest')->middleware('auth');
     Route::get('/customer-home/myprofil', 'myprofil')->middleware('auth');
     Route::get('/customer-home/profilupdate/{id}', 'profilupdate')->middleware('auth');
+    Route::get('/customer-home/requestupdate/{id}', 'requestupdate')->middleware('auth');
     Route::get('/customer-home/payment', 'payment')->middleware('auth');
     Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->middleware('auth')->name('customerrequestform');
 });

@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-md-3">
 
-                            <a href="" class="btn btn-accent-2"
+                            <a href="{{url('customer-home/requestupdate',['id'=>$myrequest->id])}}" class="btn btn-accent-2"
                                 style="height: 50px;width:170px;font-size: 14px">Modifier</a> <br> <a href=""
                                 class="btn btn-accent-1" style="height: 50px;width:170px;font-size: 14px">Supprimer</a>
 
