@@ -14,7 +14,7 @@
                 <p class="mb-40 font-size-18 fw-medium text-white pe-lg-70">Text detail.</p><!-- Button--><a class="btn text-white btn-link btn-clean" href="#" target="_self">En savoir plus</a>
             </div>
             <div class="col-lg-5">
-                @livewire('customers.login-form')
+                @livewire('workers.login-form')
             </div>
         </div>
     </div>
