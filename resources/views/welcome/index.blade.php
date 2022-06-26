@@ -1,4 +1,7 @@
 @extends('welcome.app')
+
+@section('title', 'Acceuil')
+
 @section('content')
     <div class="swiper bg-dark" data-swiper-slides="1" data-swiper-speed="1000" data-swiper-grabcursor="true"
         data-swiper-parallax="true" data-swiper-pagination="true">

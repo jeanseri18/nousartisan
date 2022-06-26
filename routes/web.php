@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::controller(App\Http\Controllers\WelcomeController::class)->group(function(){
     Route::get('/', 'index');
     Route::get('/welcome/services/{id}',  'services')->name('services');
@@ -83,7 +82,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-
 route::prefix("administration")->group(function(){
     Route::resource('benefitCategories', App\Http\Controllers\BenefitCategoryController::class);
 
@@ -100,19 +98,17 @@ route::prefix("administration")->group(function(){
     Route::resource('customers', App\Http\Controllers\CustomerController::class);
 
     Route::resource('workers', App\Http\Controllers\WorkerController::class);
-
 });
 
 
+// Route::get('/login-workers', function () {
+//     return view('workers.login');
+// })->name('workers.login');
 
-Route::get('/login-customers', function () {
-    return view('login');
-})->name('customers.login');
 
-
-Route::get('/register-customers', function () {
-    return view('register');
-})->name('customers.register');
+// Route::get('/register-workers', function () {
+//     return view('register');
+// })->name('workers.register');
 
 // Route::get('/customer-home', function () {
 //     //TODO customer home  must be create page

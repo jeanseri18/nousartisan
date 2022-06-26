@@ -1,20 +1,12 @@
 <?php
 
-namespace App\Http\Livewire\Customers;
+namespace App\Http\Livewire\Workers;
 
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class LoginForm extends Component
 {
-    public $email;
-    public $password;
-    public $no_loggin = false;
-
-    protected $rules =[
-        "email"=>"required",
-        "password"=>"required",
-    ];
 
     public function login(){
         $this->validate();
@@ -33,6 +25,7 @@ class LoginForm extends Component
 
     public function render()
     {
-        return view('livewire.customers.login-form');
+        return view('livewire.workers.login-form');
     }
 }
+

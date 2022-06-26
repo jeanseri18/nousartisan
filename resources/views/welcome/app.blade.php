@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startbox | Home 01</title>
+    <title>Startbox | @yield('title')</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Startbox">
     <meta name="author" content="RunWebRun">
@@ -29,7 +29,6 @@
 </head>
 
 <body class=" has-topbar">
-
 
     @include('layouts.frontend-welcome.navbar')
     <!-- Navbar mobile-->
@@ -61,9 +60,9 @@
     <script src="{{asset('assets/js/controllers/swiper.js')}}"></script>
     <script src="{{asset('assets/js/controllers/others.js')}}"></script><!-- endbuild -->
     @livewireScripts
+    @stack('script')
 </body>
 
-@stack('script')
 <!-- Mirrored from runwebrun.com/startbox/home-01.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jun 2022 16:09:47 GMT -->
 
 </html>

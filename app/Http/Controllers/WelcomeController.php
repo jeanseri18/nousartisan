@@ -16,10 +16,10 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-    $data['title']='Acceuil';
-    $data['categories']=BenefitCategory::All();
+        $data['title']='Acceuil';
+        $data['categories']=BenefitCategory::all();
 
-    $data['service_requests']=ServiceRequest::All();
+        $data['service_requests']=ServiceRequest::all();
 
 
         return view('welcome.index',$data);
@@ -32,8 +32,8 @@ class WelcomeController extends Controller
      */
     public function categories()
     {
-    $data['title']='Liste des services disponibles';
-    $data['categories']=BenefitCategory::All();
+        $data['title']='Liste des services disponibles';
+        $data['categories']=BenefitCategory::all();
 
         return view('welcome.categories',$data);
     }
@@ -46,10 +46,8 @@ class WelcomeController extends Controller
      */
     public function services($id)
     {
-    $data['title']='Liste des services disponibles';
-    $data['services']=ServiceOfBenefitCategory::select('*')->where('benefit_category_id','=',$id)->get();
-
-
+        $data['title']='Liste des services disponibles';
+        $data['services']=ServiceOfBenefitCategory::where('benefit_category_id','=',$id)->get();
 
         return view('welcome.services',$data);
     }
@@ -63,10 +61,9 @@ class WelcomeController extends Controller
      */
     public function formrequest($id ,$name)
     {
-    $data['title']='Formulaire de demande';
-    $data['idService']=$id;
-    $data['name']=$name;
-
+        $data['title']='Formulaire de demande';
+        $data['idservice']=$id;
+        $data['name']=$name;
 
         return view('welcome.formrequest',$data);
     }
@@ -78,10 +75,7 @@ class WelcomeController extends Controller
      */
     public function registerpro()
     {
-    $data['title']='Formulaire d enregistrement d un prestataire ';
-
-
-
+        $data['title']='Formulaire d enregistrement d un prestataire ';
         return view('welcome.registerpro',$data);
     }
 
@@ -92,9 +86,7 @@ class WelcomeController extends Controller
      */
     public function register()
     {
-    $data['title']='Inscription ';
-
-
+        $data['title']='Inscription ';
 
         return view('welcome.register',$data);
     }
@@ -105,9 +97,7 @@ class WelcomeController extends Controller
      */
     public function login()
     {
-    $data['title']='Connexion ';
-
-
+        $data['title']='Connexion ';
 
         return view('welcome.login',$data);
     }

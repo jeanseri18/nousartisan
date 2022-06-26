@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string $owner_number
  * @property string $owner_name
  * @property string $email
+ * @property string $address_electro
  * @property string $tel
  * @property string $password
  */
@@ -27,7 +28,7 @@ class Worker extends Model
     use HasFactory;
 
     public $table = 'workers';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -38,10 +39,11 @@ class Worker extends Model
 
     public $fillable = [
         'number_siren',
+        'user_id',
         'name',
+        'owner_name',
         'number_tva',
         'owner_number',
-        'owner_name',
         'email',
         'tel',
         'password'
@@ -54,6 +56,7 @@ class Worker extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'user_id' => 'integer',
         'number_siren' => 'string',
         'name' => 'string',
         'number_tva' => 'string',
@@ -83,5 +86,5 @@ class Worker extends Model
         'deleted_at' => 'nullable'
     ];
 
-    
+
 }

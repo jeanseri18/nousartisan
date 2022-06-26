@@ -11,7 +11,6 @@ use Livewire\Component;
 class RegisterForm extends Component
 {
 
-    //TODO password confirmation validation
     protected $rules = [
         'name' => "required",
         'email' => "required",
@@ -19,7 +18,6 @@ class RegisterForm extends Component
         'address_facturation' => "required",
         'password' => "required|confirmed",
     ];
-
 
     public $name;
     public $email;
@@ -35,10 +33,10 @@ class RegisterForm extends Component
 
     public function register(){
 
-
         $this->validate();
 
         $userRole = UserRole::where('name','customer')->first();
+
 
         $user = new User();
         $user->name = $this->name;
@@ -56,7 +54,6 @@ class RegisterForm extends Component
         $customer->phone = $user->phone;
         $customer->address_facturation = $user->address_facturation;
         $customer->save();
-
 
         return redirect()->route('customers.home');
         // dd(

@@ -1,4 +1,9 @@
 @extends('welcome.app')
+
+@section('title')
+    Titre
+@endsection
+
 @section('content')
     <div class="swiper bg-dark" data-swiper-slides="1" data-swiper-speed="1000" data-swiper-grabcursor="true"
         data-swiper-parallax="true" data-swiper-pagination="true">
@@ -168,11 +173,6 @@
     </div>
     <!-- Main-->
     <div class="content-wrap  container">
-
-
-
-
-
         <br><br> <br>
 
         <center>
@@ -183,14 +183,7 @@
 
             </form>
         </center>
-
-
-
-
-        <!--
-                        -
-                        -
-                    -->
+        <!-- -->
     </div>
 
 
@@ -246,7 +239,7 @@
                 </div>
             </div>
             <div class="row gy-30">
-                
+
 
                 <!-- Service case-->
 
@@ -256,7 +249,7 @@
                             href="" data-img-height style="--img-height: 64%;"><img loading="lazy"
                                 src="assets/img/service-case-5-740x480.jpg" alt=""></a>
                         <div class="service-case-body position-relative">
-                            <!-- Circle icon-->
+                                <!-- Circle icon-->
 
                             <h4 class="service-case-title mb-15">Project Management</h4>
                             <a class="service-case-arrow stretched-link" href=""></a>
