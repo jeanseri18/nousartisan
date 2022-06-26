@@ -33,7 +33,8 @@ class ServiceProposal extends Model
         'service_request_id',
         'price_of_proposal',
         'status_id',
-        'quotation'
+        'quotation',
+        'id_worker'
     ];
 
     /**
@@ -45,7 +46,8 @@ class ServiceProposal extends Model
         'service_request_id' => 'integer',
         'price_of_proposal' => 'string',
         'status_id' => 'integer',
-        'quotation' => 'string'
+        'quotation' => 'string',
+        'id_worker'=>'string'
     ];
 
     /**

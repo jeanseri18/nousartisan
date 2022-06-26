@@ -55,7 +55,10 @@ class ServiceRequest extends Model
         'price_by_hour',
         'status_id',
         'fix_price',
-        'price_after_nego'
+        'price_after_nego',
+        'heure',
+        'titre',
+        'dure'
     ];
 
     /**
@@ -78,7 +81,11 @@ class ServiceRequest extends Model
         'price_by_hour' => 'string',
         'status_id' => 'integer',
         'fix_price' => 'string',
-        'price_after_nego' => 'string'
+        'price_after_nego' => 'string',
+        'heure'=>'string',
+        'titre'=>'string',
+        'dure'=>'integer'
+
     ];
 
     /**
@@ -95,4 +102,6 @@ class ServiceRequest extends Model
     {
         return $this->belongsTo(Status::class);
     }
+
+
 }

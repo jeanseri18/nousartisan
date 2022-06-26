@@ -45,7 +45,7 @@
                     <a class="card-title h5 " href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;">{{ $service->name }}<br>
                     <a class="card-title h5  " href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;color:#f01f4b;">{{ $service->price }} € - {{ $service->real_price }} € par
                         heure</a>
-                </div>
+                </div>  
                 @endforeach
                 {{-- <div class="text-center mt-80">
                     <!-- Button--><a class="btn btn-light" href="#" target="_self">Load more</a>
