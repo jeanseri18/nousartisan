@@ -1,20 +1,20 @@
 @extends('customerhome.app')
 
 @section('content')
-    <div style="margin: 40px">
+    <div style="margin: 40px;">
         <br>
         <!-- Nav tabs -->
 
 
-        <a href="" class="btn btn-accent-2" style="background-color:blanchedalmond;color:black;">Toutes
+        <a href="{{url('/customer-home/myrequests')}}" class="btn btn-accent-2" style="background-color:blanchedalmond;color:black;">Toutes
             les
             demandes</a>
 
 
-        <a href="" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Demandes en cours</a>
+        <a href="{{url('/customer-home/myrequestwait')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Demandes en cours</a>
 
 
-        <a href="" class="btn btn-accent-2" style="height: 50px;background-color:#f5f5f5;color:black;">Demande
+        <a href="{{url('/customer-home/myrequestok')}}" class="btn btn-accent-2" style="height: 50px;background-color:#f5f5f5;color:black;">Demande
             finalisées</a>
         <br><br>
 
@@ -51,13 +51,13 @@
                         <div class="col-md-3">
 
                             <a href="{{url('customer-home/requestupdate',['id'=>$myrequest->id])}}" class="btn btn-accent-2"
-                                style="height: 50px;width:170px;font-size: 14px">Modifier</a> <br> <a href=""
+                                style="height: 50px;width:170px;font-size: 14px">Modifier</a> <br> <a href="{{url('customer-home/myrequestsdelete',['id'=>$myrequest->id,'statut'=>'1'])}}"
                                 class="btn btn-accent-1" style="height: 50px;width:170px;font-size: 14px">Supprimer</a>
 
                         </div>
 
 
-                        @livewire('customerhome.request-proposal',['id'=>$myrequest->id])
+
 
 
 
@@ -67,7 +67,8 @@
 
 
                 </div>
-            </div><hr>
+            </div>  @livewire('customerhome.request-proposal',['id'=>$myrequest->id])
+            <hr>
 
             @endforeach
 

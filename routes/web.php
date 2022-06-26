@@ -26,8 +26,13 @@ Route::controller(App\Http\Controllers\WelcomeController::class)->group(function
 
 Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(function(){
     Route::get('/customer-home', 'index')->name('customers.home')->middleware('auth');
+    Route::get('/customer-home/myrequestwait', 'myrequestwait')->middleware('auth');
+    Route::get('/customer-home/myrequestok', 'myrequestok')->middleware('auth');
     Route::get('/customer-home/myrequests', 'myrequest')->middleware('auth');
     Route::get('/customer-home/myprofil', 'myprofil')->middleware('auth');
+    Route::get('/customer-home/myrequestsupdate/{id}/{worker}/{statut}/{price}', 'myrequestsupdate')->middleware('auth');
+    Route::get('/customer-home/myrequestwaitupdate/{id}/{worker}/{statut}/{price}', 'myrequestwaitupdate')->middleware('auth');
+    Route::get('/customer-home/myrequestsdelete/{id}/{statut}', 'myrequestsdelete')->middleware('auth');
     Route::get('/customer-home/profilupdate/{id}', 'profilupdate')->middleware('auth');
     Route::get('/customer-home/requestupdate/{id}', 'requestupdate')->middleware('auth');
     Route::get('/customer-home/payment', 'payment')->middleware('auth');
@@ -37,6 +42,8 @@ Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(fun
 Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
     Route::get('/worker-home', 'index');
     Route::get('/worker-home/myoffer', 'myoffer');
+    Route::get('/worker-home/myofferwait', 'myofferwait');
+    Route::get('/worker-home/myofferok', 'myofferok');
     Route::get('/worker-home/myprofil', 'myprofil');
     Route::get('/worker-home/detail-offer', 'detailoffer');
     Route::get('/worker-home/payment', 'payment');

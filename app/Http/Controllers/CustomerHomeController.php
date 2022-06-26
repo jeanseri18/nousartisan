@@ -8,6 +8,7 @@ use App\Models\ServiceOfBenefitCategory;
 use App\Models\ServiceRequest;
 use App\Models\Customer;
 use App\Models\User;
+use App\Models\Payment;
 use Auth;
 class CustomerHomeController extends Controller
 {
@@ -38,13 +39,117 @@ class CustomerHomeController extends Controller
     public function myrequest()
     {
     $data['title']='Mes demandes';
-    $data['myrequests']=ServiceRequest::where('user_id',Auth::id())  ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
+    $data['myrequests']=ServiceRequest::where('service_requests.user_id',Auth::id())
+    ->where('service_requests.status_id','0')
+    ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
+    ->get(['service_requests.*','service_of_benefit_categories.name']);
+    return view('customerhome.myrequests',$data);
+    }
+
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myrequestwait()
+    {
+    $data['title']='Mes demandes';
+    $data['myrequests']=ServiceRequest::where('service_requests.user_id',Auth::id())
+    ->where('service_requests.status_id','1')
+    ->join('workers','service_requests.worker_id','=','workers.id')
+    ->get(['service_requests.*','workers.name','workers.image']);
+
+
+    return view('customerhome.myrequestwait',$data);
+    }
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myrequestok()
+    {
+    $data['title']='Mes demandes';
+    $data['myrequests']=ServiceRequest::where('user_id',Auth::id())
+    ->where('service_requests.status_id','2')
+    ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
    ->get(['service_requests.*','service_of_benefit_categories.name']);
 //
+    return view('customerhome.myrequestok',$data);
+    }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @param  int  $id
+     * @param  int  $statut
+     * @param  int  $worker
+     * @param  int  $price
+     * @return \Illuminate\Http\Response
+     */
+    public function myrequestsupdate($id,$worker,$statut,$price)
+    {
+        $myrequest=ServiceRequest::where('id',$id)->first();
+        $myrequest->status_id=$statut;
+        $myrequest->worker_id=$worker;
+        $myrequest->price_after_nego=$price;
+        $myrequest->save();
+        session()->flash('messageprofil', 'Vos information ont été modifié avec  succes.');
+
+
+        return back();
+    }
+
+        /**
+     * Display a listing of the resource.
+     *
+     * @param  int  $id
+     * @param  int  $statut
+     * @param  int  $price
+     * @param  int  $worker
+     * @return \Illuminate\Http\Response
+     */
+    public function myrequestwaitupdate($id,$worker,$statut,$price)
+    {
+        $data['title']='Mes demandes';
+        $data['myrequests']=ServiceRequest::where('user_id',Auth::id())  ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
+        ->where('service_requests.status_id','1')
+        ->get(['service_requests.*','service_of_benefit_categories.name']);
+        
+        $myrequest=ServiceRequest::where('id',$id)->first();
+        $myrequest->status_id=$statut;
+        $myrequest->save();
+        $payment=new Payment;
+        $payment->worker_id=$worker;
+        $payment->user_id=Auth::id();
+        $payment->amount=$price;
+        $payment->request_id=$id;
+        $payment->status_worker=0;
+        $payment->save();
+        session()->flash('messageprofil', 'Vos information ont été modifié avec  succes.');
 
 
 
-    return view('customerhome.myresquests',$data);
+        return view('customerhome.myrequestwait',$data);
+    }
+
+       /**
+     * Display a listing of the resource.
+     *
+     * @param  int  $id
+     * @param  String  $statut
+     * @return \Illuminate\Http\Response
+     */
+    public function myrequestsdelete($id,$statut)
+    {
+        $myrequest=ServiceRequest::where('id',$id)->first();
+        $myrequest->status_id=$statut;
+        $myrequest->save();
+        session()->flash('messageprofil', 'Vos information ont été modifié avec  succes.');
+    //     $data['title']='Mes demandes';
+    //     $data['myrequests']=ServiceRequest::where('user_id',Auth::id())  ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
+    //    ->get(['service_requests.*','service_of_benefit_categories.name']);
+        return back();
     }
 
 
@@ -120,7 +225,10 @@ class CustomerHomeController extends Controller
     {
     $data['title']='Mes paiments';
 
-
+    $data['mypayments']=Payment::where('payment.user_id',Auth::id())
+    ->join('service_requests','payment.request_id','=','service_requests.id')
+    ->join('workers','workers.id','=','service_requests.worker_id')
+    ->get(['payment.*','service_requests.titre','workers.name']);
     return view('customerhome.payment',$data);
     }
 

@@ -2,10 +2,10 @@
 @section('content')
     <div style="margin: 40px">
         <br>
-        <a href="{{url('/worker-home/myoffer')}}" class="btn btn-accent-2" style="background-color:blanchedalmond;color:black;">Toutes les
+        <a href="{{url('/worker-home/myoffer')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Toutes les
             offres</a>
         <a href="{{url('/worker-home/myofferwait')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Offres en cours</a>
-        <a href="{{url('/worker-home/myofferok')}}" class="btn btn-accent-2" type="button" style="background-color:#f5f5f5;color:black;">Offres
+        <a href="{{url('/worker-home/myofferok')}}" class="btn btn-accent-2" type="button" style="background-color:blanchedalmond;color:black;">Offres
             finalisées</a>
         <br><br>
 
