@@ -95,19 +95,17 @@ route::prefix("administration")->group(function(){
     Route::resource('customers', App\Http\Controllers\CustomerController::class);
 
     Route::resource('workers', App\Http\Controllers\WorkerController::class);
-
 });
 
 
+// Route::get('/login-workers', function () {
+//     return view('workers.login');
+// })->name('workers.login');
 
-Route::get('/login-customers', function () {
-    return view('login');
-})->name('customers.login');
 
-
-Route::get('/register-customers', function () {
-    return view('register');
-})->name('customers.register');
+// Route::get('/register-workers', function () {
+//     return view('register');
+// })->name('workers.register');
 
 // Route::get('/customer-home', function () {
 //     //TODO customer home  must be create page

@@ -23,6 +23,7 @@ class CreateWorkersTable extends Migration
             $table->string('owner_number')->nullable();
             $table->string('owner_name')->nullable();
             $table->string('email')->nullable();
+            $table->string('address_electro')->nullable();
             $table->string('tel')->nullable();
             $table->string('password')->nullable();
             $table->timestamps();

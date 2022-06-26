@@ -37,6 +37,7 @@ class RegisterForm extends Component
 
         $userRole = UserRole::where('name','customer')->first();
 
+
         $user = new User();
         $user->name = $this->name;
         $user->user_role_id = $userRole->id;
