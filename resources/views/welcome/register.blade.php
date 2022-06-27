@@ -1,4 +1,7 @@
 @extends('welcome.app')
+
+@section('title', 'Inscription Client')
+
 @section('content')
 
 <div class="pt-150 pb-70 position-relative align-items-center d-flex">

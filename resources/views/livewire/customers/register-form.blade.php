@@ -42,11 +42,11 @@
 
         <input class="form-control form-control-style-2 mt-13" type="password" wire:model="password_confirmation" placeholder=" Confirmation du mot de passe *">
 
-            @error('password_confirmation')
+            {{-- @error('password')
                  <small style="color:red;">
                      {{ $message }}
                  </small>
-            @enderror
+            @enderror --}}
 
         {{-- <select class="form-control form-control-style-2 mt-13">
             <option selected="">I interested in ...</option>

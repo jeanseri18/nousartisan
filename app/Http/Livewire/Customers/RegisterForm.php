@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Customers;
 use App\Models\Customer;
 use App\Models\User;
 use App\Models\UserRole;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
@@ -32,11 +33,10 @@ class RegisterForm extends Component
     public $lastname;
 
     public function register(){
-
+        // dd('Okay');
         $this->validate();
 
         $userRole = UserRole::where('name','customer')->first();
-
 
         $user = new User();
         $user->name = $this->name;
@@ -54,6 +54,8 @@ class RegisterForm extends Component
         $customer->phone = $user->phone;
         $customer->address_facturation = $user->address_facturation;
         $customer->save();
+
+        Auth::loginUsingId($user->id);
 
         return redirect()->route('customers.home');
         // dd(

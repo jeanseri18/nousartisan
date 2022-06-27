@@ -22,9 +22,26 @@ class PasswordUpdate extends Component
 
     public function updatepassword(){
 
-        // $this->validate();
+        $this->validate();
+
+        //ancien compare user->password
+
+        $user = Auth::user();
+        
+        $check = Hash::check($this->password,$user->password);
+
+        if($check){
+            dd('okay');
+
+            $user->password = Hash::make($this->newpassword);
+            $user->save();
+        }else{
+            dd('noo');
+        }
+
+
         // $id=Auth::id();
-        // $pwscheck= Hash::check($this->password,Auth::user());
+        // $pwscheck= Hash::check($this->password,Auth::user()->password);
 
         // // $user=User::where('id',$id)->where('password', $pwscheck)->first();
 

@@ -1,4 +1,5 @@
 @extends('welcome.app')
+@section('title', 'Inscription Prestataire')
 @section('content')
 <br>
     <div class="row " >
