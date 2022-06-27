@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendors/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/css/swiper-bundle.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"><!-- endbuild -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- jQuery-->
     <script src="{{ asset('assets/vendors/js/jquery.min.js') }}"></script>
     @livewireStyles
