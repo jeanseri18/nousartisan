@@ -2,15 +2,13 @@
 @section('content')
     <div style="margin: 40px">
         <br>
-        <a href="{{ url('/worker-home/myoffer') }}" class="btn btn-accent-2"
-            style="background-color:blanchedalmond;color:black;">Toutes les
+        <a href="{{url('/worker-home/myoffer')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Toutes les
             offres</a>
-        <a href="{{ url('/worker-home/myoffer-wait') }}" class="btn btn-accent-2"
-            style="background-color:#f5f5f5;color:black;">Offres en cours</a>
-        <a href="{{ url('/worker-home/myoffer-ok') }}" class="btn btn-accent-2" type="button"
-            style="background-color:#f5f5f5;color:black;">Offres
+        <a href="{{url('/worker-home/myoffer-wait')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Offres en cours</a>
+        <a href="{{url('/worker-home/myoffer-ok')}}" class="btn btn-accent-2" type="button" style="background-color:blanchedalmond;color:black;">Offres
             finalisées</a>
         <br><br>
+
 
 
 
@@ -51,9 +49,6 @@
                         </div>
                         <div class="col-md-3">
 
-                            <a href="" class="btn btn-accent-1" style="height: 50px;width:170px;font-size: 14px">
-                                <i class="bi bi-trash-fill">  Supprimer</i>
-                            </a>
 
                         </div>
 
@@ -70,7 +65,6 @@
             </div>
 
         </div>
-
     </div>
     </div><br><br><br><br></div>
 @endsection

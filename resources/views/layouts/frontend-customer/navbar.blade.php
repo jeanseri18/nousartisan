@@ -72,19 +72,17 @@
 
             </li>
 
+            <li class="nav-item navbar-dropdown"><a class="nav-link" href="#"><span>Mon
+                compte</span></a>
+                <div class="dropdown-menu rounded-2 shadow">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="{{url('/customer-home/myprofil')}}"><span>Mon profil</span></a></li>
 
-            <li class="nav-item navbar-dropdown"><a class="nav-link" href=""><span>Mon compte</span></a>
-                <li class="nav-item navbar-dropdown"><a class="nav-link" href="#"><span>Mon
-                    compte</span></a>
-                    <div class="dropdown-menu rounded-2 shadow">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="{{url('/customer-home/myprofil')}}"><span>Mon profil</span></a></li>
-                            {{-- <li class="nav-item"><a class="nav-link" href="/worker-home/abonnement"><span>Abonnement</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="/worker-home/payment"><span>Paiement</span></a></li> --}}
-                        </ul>
-                    </div>
-        </li>
-            </li>
+                        <li class="nav-item"><a class="nav-link" href="{{url('/customer-home/payment')}}"><span>Paiement</span></a></li>
+                    </ul>
+                </div>
+    </li>
+            
 
             </ul>
         </div>

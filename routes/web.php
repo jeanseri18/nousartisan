@@ -26,17 +26,26 @@ Route::controller(App\Http\Controllers\WelcomeController::class)->group(function
 
 Route::controller(App\Http\Controllers\CustomerHomeController::class)->middleware(['auth'])->group(function(){
     Route::get('/customer-home', 'index')->name('customers.home');
+    Route::get('/customer-home/myrequest-wait', 'myrequestwait');
+    Route::get('/customer-home/myrequest-ok', 'myrequestok');
     Route::get('/customer-home/myrequests', 'myrequest');
     Route::get('/customer-home/myprofil', 'myprofil');
-    Route::get('/customer-home/profilupdate/{id}', 'profilupdate');
+    Route::get('/customer-home/myrequests-update/{id}/{worker}/{statut}/{price}', 'myrequestsupdate');
+    Route::get('/customer-home/myrequest-wait-update/{id}/{worker}/{statut}/{price}', 'myrequestwaitupdate');
+    Route::get('/customer-home/myrequests-delete/{id}/{statut}', 'myrequestsdelete');
+    Route::get('/customer-home/profil-update/{id}', 'profilupdate');
+    Route::get('/customer-home/request-update/{id}', 'requestupdate');
     Route::get('/customer-home/payment', 'payment');
-    Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
+    Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customer-request-form');
 });
 
 Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
     Route::get('/worker-home', 'index')->name('worker.home');
     Route::get('/worker-home/myoffer', 'myoffer');
+    Route::get('/worker-home/myoffer-wait', 'myofferwait');
+    Route::get('/worker-home/myoffer-ok', 'myofferok');
     Route::get('/worker-home/myprofil', 'myprofil');
+    Route::get('/worker-home/offer-list/{id}', 'offerlist');
     Route::get('/worker-home/detail-offer', 'detailoffer');
     Route::get('/worker-home/payment', 'payment');
     Route::get('/worker-home/abonnement', 'abonnement');

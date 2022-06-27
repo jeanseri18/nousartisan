@@ -36,6 +36,32 @@ class WorkerHomeController extends Controller
     return view('workershome.myoffer',$data);
     }
 
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myofferwait()
+    {
+    $data['title']='Mes offres en cour';
+
+
+    return view('workershome.myoffer-wait',$data);
+    }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myofferok()
+    {
+    $data['title']='Mes offres finalisé';
+
+
+    return view('workershome.myoffer-ok',$data);
+    }
+
       /**
      * Display a listing of the resource.
      *
@@ -46,7 +72,7 @@ class WorkerHomeController extends Controller
     $data['title']='Detail de l offre';
 
 
-    return view('workershome.detailoffer',$data);
+    return view('workershome.detail-offer',$data);
     }
        /**
      * Display a listing of the resource.

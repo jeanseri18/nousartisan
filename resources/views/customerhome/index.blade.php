@@ -6,14 +6,18 @@
                 src="assets/img/home.jpg" alt=""></div>
     </div>
 </div> --}}
-<br><br><br>
-<center>
+<br><br><center>
+
+<h2>De quel service avez-vous besoin ?</h2>
+
+
     <form class="form-group-overlay mx-lg-70 container col-md-8"><input
             class="form-control form-control-white form-control-style-3 shadow" type="email"
-            placeholder="Que cherche vous ?*" id="search" ><!-- Button--><a
+            placeholder="*" id="search" ><!-- Button--><a
             class="btn btn-accent-1 mt-6 me-6 no-transform"  href="#" target="_self">Recherhche</a>
 
-    </form>
+    </form><br>
+    <h5>Pour chaque situation, trouvez le prestataire dont les compétences répondent à vos attentes et à votre niveau d’exigence.</h5>
 </center>
 <div class="pt-80 pb-130">
     <div class="container">
@@ -35,17 +39,17 @@
                     <!-- Blog-->
                     <div
                         class="card rounded-1 overflow-hidden bg-white">
-                        <a class="card-img rounded-0" href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" data-img-height style="--img-height: 50%;">
+                        <a class="card-img rounded-0" href="{{ route('customer-request-form',['id'=> $service->id,'name'=>$service->name]) }}" data-img-height style="--img-height: 50%;">
                             <span
                                 class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Service {{
                                 $service->name }}</span>
                             <img loading="lazy" src="{{ $service->image}}" alt=""></a>
 
                     </div>
-                    <a class="card-title h5 " href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;">{{ $service->name }}<br>
-                    <a class="card-title h5  " href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;color:#f01f4b;">{{ $service->price }} € - {{ $service->real_price }} € par
+                    <a class="card-title h5 " href="{{ route('customer-request-form',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;">{{ $service->name }}<br>
+                    <a class="card-title h5  " href="{{ route('customer-request-form',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;color:#f01f4b;">{{ $service->price }} € - {{ $service->real_price }} € par
                         heure</a>
-                </div>  
+                </div>
                 @endforeach
                 {{-- <div class="text-center mt-80">
                     <!-- Button--><a class="btn btn-light" href="#" target="_self">Load more</a>

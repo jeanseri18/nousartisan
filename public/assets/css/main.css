@@ -41896,7 +41896,7 @@ body.has-topbar .navbar-top.navbar-opaque {
 .navbar-mobile .navbar-body > .navbar-nav {
   margin-top: -8px;
   margin-bottom: -8px;
-  font-size: 34px;
+  font-size: 16px;
   line-height: 1.2;
 }
 .navbar-mobile .navbar-body .nav .nav-link {
