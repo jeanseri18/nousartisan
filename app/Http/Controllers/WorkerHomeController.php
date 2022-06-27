@@ -16,11 +16,11 @@ class WorkerHomeController extends Controller
      */
     public function index()
     {
-    $data['title']='Service';
-    $data['categories']=BenefitCategory::All();
+      $data['title']='Service';
+      $data['categories']=BenefitCategory::all();
 
-    $data['services']=ServiceOfBenefitCategory::All();
-    return view('workershome.index',$data);
+      $data['services']=ServiceOfBenefitCategory::all();
+      return view('workershome.index',$data);
     }
 
      /**

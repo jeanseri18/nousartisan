@@ -24,17 +24,17 @@ Route::controller(App\Http\Controllers\WelcomeController::class)->group(function
     Route::get('/welcome/login',  'login')->name('loginform');
 });
 
-Route::controller(App\Http\Controllers\CustomerHomeController::class)->group(function(){
-    Route::get('/customer-home', 'index')->name('customers.home')->middleware('auth');
-    Route::get('/customer-home/myrequests', 'myrequest')->middleware('auth');
-    Route::get('/customer-home/myprofil', 'myprofil')->middleware('auth');
-    Route::get('/customer-home/profilupdate/{id}', 'profilupdate')->middleware('auth');
-    Route::get('/customer-home/payment', 'payment')->middleware('auth');
-    Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->middleware('auth')->name('customerrequestform');
+Route::controller(App\Http\Controllers\CustomerHomeController::class)->middleware(['auth'])->group(function(){
+    Route::get('/customer-home', 'index')->name('customers.home');
+    Route::get('/customer-home/myrequests', 'myrequest');
+    Route::get('/customer-home/myprofil', 'myprofil');
+    Route::get('/customer-home/profilupdate/{id}', 'profilupdate');
+    Route::get('/customer-home/payment', 'payment');
+    Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customerrequestform');
 });
 
 Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
-    Route::get('/worker-home', 'index');
+    Route::get('/worker-home', 'index')->name('worker.home');
     Route::get('/worker-home/myoffer', 'myoffer');
     Route::get('/worker-home/myprofil', 'myprofil');
     Route::get('/worker-home/detail-offer', 'detailoffer');
@@ -75,7 +75,7 @@ Route::get('/pay', function () {
 
 Route::get('/detaildemande', function () {
     return view('detaildemande');
-});
+}); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
