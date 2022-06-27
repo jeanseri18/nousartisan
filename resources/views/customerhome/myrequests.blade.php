@@ -11,10 +11,10 @@
             demandes</a>
 
 
-        <a href="{{url('/customer-home/myrequestwait')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Demandes en cours</a>
+        <a href="{{url('/customer-home/myrequest-wait')}}" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Demandes en cours</a>
 
 
-        <a href="{{url('/customer-home/myrequestok')}}" class="btn btn-accent-2" style="height: 50px;background-color:#f5f5f5;color:black;">Demande
+        <a href="{{url('/customer-home/myrequest-ok')}}" class="btn btn-accent-2" style="height: 50px;background-color:#f5f5f5;color:black;">Demande
             finalisées</a>
         <br><br>
 
@@ -50,8 +50,8 @@
                         </div>
                         <div class="col-md-3">
 
-                            <a href="{{url('customer-home/requestupdate',['id'=>$myrequest->id])}}" class="btn btn-accent-2"
-                                style="height: 50px;width:170px;font-size: 14px"><i class="bi bi-pencil"> Modifier</i></a> <br> <a href="{{url('customer-home/myrequestsdelete',['id'=>$myrequest->id,'statut'=>'1'])}}"
+                            <a href="{{url('customer-home/request-update',['id'=>$myrequest->id])}}" class="btn btn-accent-2"
+                                style="height: 50px;width:170px;font-size: 14px"><i class="bi bi-pencil"> Modifier</i></a> <br> <a href="{{url('customer-home/myrequests-delete',['id'=>$myrequest->id,'statut'=>'1'])}}"
                                 class="btn btn-accent-1" style="height: 50px;width:170px;font-size: 14px"><i class="bi bi-trash-fill">Supprimer</i></a>
 
                         </div>

@@ -60,7 +60,7 @@ class CustomerHomeController extends Controller
     ->get(['service_requests.*','workers.name','workers.image']);
 
 
-    return view('customerhome.myrequestwait',$data);
+    return view('customerhome.myrequest-wait',$data);
     }
       /**
      * Display a listing of the resource.
@@ -75,7 +75,7 @@ class CustomerHomeController extends Controller
     ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
    ->get(['service_requests.*','service_of_benefit_categories.name']);
 //
-    return view('customerhome.myrequestok',$data);
+    return view('customerhome.myrequest-ok',$data);
     }
 
         /**
@@ -115,7 +115,7 @@ class CustomerHomeController extends Controller
         $data['myrequests']=ServiceRequest::where('user_id',Auth::id())  ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
         ->where('service_requests.status_id','1')
         ->get(['service_requests.*','service_of_benefit_categories.name']);
-        
+
         $myrequest=ServiceRequest::where('id',$id)->first();
         $myrequest->status_id=$statut;
         $myrequest->save();
@@ -130,7 +130,7 @@ class CustomerHomeController extends Controller
 
 
 
-        return view('customerhome.myrequestwait',$data);
+        return view('customerhome.myrequest-wait',$data);
     }
 
        /**
@@ -253,7 +253,7 @@ class CustomerHomeController extends Controller
 
 
 
-        return view('customerhome.requestform',$data);
+        return view('customerhome.request-form',$data);
     }
 
 

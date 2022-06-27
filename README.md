@@ -25,5 +25,11 @@
     0 valide
     1 echec
     2 rembourssement
+
+    ## nomanclature
+    
+    myoffer-wait mes offres en cour
+    myoffer-ok mes offres finalisées
+    myoffer - mes offres enregistrées
     
 

@@ -11,11 +11,11 @@
             demandes</a>
 
 
-        <a href="/customer-home/myrequestwait" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Demandes
+        <a href="/customer-home/myrequest-wait" class="btn btn-accent-2" style="background-color:#f5f5f5;color:black;">Demandes
             en cours</a>
 
 
-        <a href="/customer-home/myrequestok" class="btn btn-accent-2"
+        <a href="/customer-home/myrequest-ok" class="btn btn-accent-2"
             style="height: 50px;background-color:blanchedalmond;color:black;">Demande
             finalisées</a>
         <br><br>

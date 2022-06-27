@@ -11,10 +11,10 @@
             demandes</a>
 
 
-        <a href="{{url('/customer-home/myrequestwait')}}" class="btn btn-accent-2" style="background-color:blanchedalmond;color:black;">Demandes en cours</a>
+        <a href="{{url('/customer-home/myrequest-wait')}}" class="btn btn-accent-2" style="background-color:blanchedalmond;color:black;">Demandes en cours</a>
 
 
-        <a href="{{url('/customer-home/myrequestok')}}" class="btn btn-accent-2" style="height: 50px;background-color:#f5f5f5;color:black;">Demande
+        <a href="{{url('/customer-home/myrequest-ok')}}" class="btn btn-accent-2" style="height: 50px;background-color:#f5f5f5;color:black;">Demande
             finalisées</a>
         <br><br>
 
@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-3">
 
-                            <a href="{{url('customer-home/myrequestwaitupdate',['id'=>$myrequest->id,'worker'=>$myrequest->worker_id,'statut'=>'2','price'=>$myrequest->price_after_nego])}}" class="btn btn-accent-2"
+                            <a href="{{url('customer-home/myrequest-wait-update',['id'=>$myrequest->id,'worker'=>$myrequest->worker_id,'statut'=>'2','price'=>$myrequest->price_after_nego])}}" class="btn btn-accent-2"
                                 style="height: 50px;width:170px;font-size: 14px"><i class="bi bi-credit-card-fill">  Payer</i></a> <br>
 
                         </div>

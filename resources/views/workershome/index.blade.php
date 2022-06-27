@@ -1,7 +1,7 @@
 @extends('workershome.app')
 @section('content')
 
-<br><br><br>
+
 {{-- <center>
     <form class="form-group-overlay mx-lg-70 container col-md-8"><input
             class="form-control form-control-white form-control-style-3 shadow" type="email"
@@ -38,7 +38,9 @@
 
                     </div>
                     {{-- <a class="card-title h5 " href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" style="text-decoration: none;">{{ $service->name }}<br> --}}
-                    <a class="card-title h5  " href="" style="text-decoration: none;color:#f01f4b;font-size:13px">{{ $service->price }} € - {{ $service->real_price }} € par
+                    <a class="card-title h5  " href="" style="text-decoration: none;color:#f01f4b;font-size:13px">{{ $service->price }} €
+                        {{-- - {{ $service->real_price }} € --}}
+                         par
                         heure (10 offre disponible)</a>
                 </div>
                 @endforeach
