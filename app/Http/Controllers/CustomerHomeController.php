@@ -17,12 +17,14 @@ class CustomerHomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
     $data['title']='Service';
     $data['categories']=BenefitCategory::All();
+    $search=$request->get('search');
 
-    $data['services']=ServiceOfBenefitCategory::All();
+    $data['services']=ServiceOfBenefitCategory::where('service_of_benefit_categories.name', 'like', '%'.$search.'%')
+    ->get();
     return view('customerhome.index',$data);
     }
 
@@ -59,7 +61,7 @@ class CustomerHomeController extends Controller
     ->join('workers','service_requests.worker_id','=','workers.id')
     ->get(['service_requests.*','workers.name','workers.image']);
 
-
+ 
     return view('customerhome.myrequest-wait',$data);
     }
       /**

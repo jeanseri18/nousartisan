@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('service_requests', function (Blueprint $table) {
-            $table->string('titre');
-            $table->string('heure');
+            $table->string('titre')->nullable();
+            $table->string('heure')->nullable();
 
         });
     }

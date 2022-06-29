@@ -70,6 +70,8 @@
 
 @push('script')
     <script>
+        document.getElementById("prix").onchange = function() {calcul()};
+            document.getElementById("dure").onchange = function() {calcul()};
         function calcul() {
             var dure = document.getElementById('dure').value;
             var prix = document.getElementById('prix').value;

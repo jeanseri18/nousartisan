@@ -44,6 +44,7 @@
 
                         </div>
                         <div class="col-md-3"><i>
+  
                             <p>Frais de service : {{ ($myrequest->price_by_hour * $myrequest->dure * 0.07)*0.14}}</p>
                             <p>Commission TVA: {{($myrequest->price_by_hour *$myrequest->dure * 0.07)}}</p>
                             <p>Date:</p></i>

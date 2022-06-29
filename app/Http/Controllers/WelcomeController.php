@@ -14,12 +14,12 @@ class WelcomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $data['title']='Acceuil';
-        $data['categories']=BenefitCategory::all();
-
-        $data['service_requests']=ServiceRequest::all();
+        $search=$request->get('search');
+        $data['categories']=BenefitCategory::where('benefit_categories.name', 'like', '%'.$search.'%')->get();
+        $data['servicerequests']=ServiceRequest::limit(5)->get();
 
 
         return view('welcome.index',$data);
@@ -47,7 +47,8 @@ class WelcomeController extends Controller
     public function services($id)
     {
         $data['title']='Liste des services disponibles';
-        $data['services']=ServiceOfBenefitCategory::where('benefit_category_id','=',$id)->get();
+        $data['services']=ServiceOfBenefitCategory::where('benefit_category_id','=',$id)
+        ->get();
 
         return view('welcome.services',$data);
     }

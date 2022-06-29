@@ -1,3 +1,6 @@
+
+<div wire:ignore>
+
 <form class=" rounded bg-white p-35 text-left" wire:submit.prevent="creatoffer">
     <h1 class="m-0 pe-30">Formulaire de demande </h1>
 
@@ -74,7 +77,7 @@
             @enderror
         </div>
         <div class="col-md-6"> <label>Heure</label>
-            <input class="form-control form-control-style-2 " wire:model="time" type="time" placeholder="heure">
+            <input class="form-control form-control-style-2 " wire:model="time" type="time" placeholder="heure" min="07:00" max="18:00">
             @error('time')
                 <small style="color:red;">
                     {{ $message }}
@@ -85,7 +88,7 @@
     <div class="row">
         <div class="col-md-6"> <label>Duree en heure</label>
             <input class="form-control form-control-style-2 " wire:model="number" type="number" id='dure'
-                placeholder="Duree en heure" >
+                placeholder="Duree en heure">
             @error('number')
                 <small style="color:red;">
                     {{ $message }}
@@ -94,7 +97,7 @@
         </div>
         <div class="col-md-6"> <label>prix par heure</label>
             <input class="form-control form-control-style-2 " wire:model="prix" type="number" id="prix"
-                placeholder="prix par heure" >
+                placeholder="prix par heure">
             @error('prix')
                 <small style="color:red;">
                     {{ $message }}
@@ -111,8 +114,63 @@
     Montant HT <b><span id="mht"></span></b><br><br>
     La TVA est defini par le prestataire<br><br>
 
-    Montant total <b><span id="mt"></span></b><br>
-    <div>
+    Montant total <b><span id="mt"></span></b>
+    <br>
+    <br>
+
+    <h4>creation de compte</h4>
+
+
+
+<input class="form-control form-control-style-2 mt-13 " type="text" wire:model="email" placeholder=" Email *">
+
+    @error('email')
+         <small style="color:red;">
+             {{ $message }}
+         </small>
+    @enderror
+
+    <div class="row">
+        <div class="col-md-6">
+
+    <input class="form-control form-control-style-2 mt-13" type="text" wire:model="name" placeholder="Nom et Prenom*">
+    @error('name')
+         <small style="color:red;">
+             {{ $message }}
+         </small>
+    @enderror</div>
+        <div class="col-md-6">
+<input class="form-control form-control-style-2 mt-13 " type="tel" wire:model="phone" placeholder=" Telephone *">
+
+    @error('phone')
+         <small style="color:red;">
+             {{ $message }}
+         </small>
+    @enderror
+        </div>
+    </div>
+
+<input class="form-control form-control-style-2 mt-13" type="text" wire:model="address_facturation" placeholder=" Adresse de facturation *">
+
+    @error('address_facturation')
+         <small style="color:red;">
+             {{ $message }}
+         </small>
+    @enderror
+    <div class="row">
+        <div class="col-md-6">
+<input class="form-control form-control-style-2 mt-13" type="password" wire:model="password" placeholder=" Mot de passe  *">
+
+    @error('password')
+         <small style="color:red;">
+             {{ $message }}
+         </small>
+    @enderror
+        </div>
+            <div class="col-md-6">
+<input class="form-control form-control-style-2 mt-13" type="password" wire:model="password_confirmation" placeholder=" Confirmation du mot de passe *">
+            </div></div>
+    <div><br>
         @if (session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
@@ -122,3 +180,4 @@
 
     <button class="btn btn-accent-1">Valider</button>
 </form>
+</div>

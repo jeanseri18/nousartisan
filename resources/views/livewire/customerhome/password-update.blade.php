@@ -5,11 +5,16 @@
                 {{ session('message') }}
             </div>
         @endif
+        @if (session()->has('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
     </div>
     <h3 class="m-0 pe-30">Mot de passe</h3>
     <hr>
     <label>Mot de passe actuel </label>
-    <input class="form-control form-control-style-2" type="text"  wire:model="password" placeholder="Mot de passe actuel ">
+    <input class="form-control form-control-style-2" type="password"  wire:model="password" placeholder="Mot de passe actuel ">
     @error('password')
     <small style="color:red;">
         {{ $message }}
@@ -17,7 +22,7 @@
 @enderror
     <br>
     <label>Nouveau mot de passe</label>
-    <input class="form-control form-control-style-2" type="text"  wire:model="newpassword" placeholder="Nouveau mot de passe">
+    <input class="form-control form-control-style-2" type="password"  wire:model="newpassword" placeholder="Nouveau mot de passe">
     @error('newpassword')
     <small style="color:red;">
         {{ $message }}

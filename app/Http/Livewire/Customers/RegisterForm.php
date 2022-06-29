@@ -45,6 +45,7 @@ class RegisterForm extends Component
         $user->phone = $this->phone;
         $user->password = Hash::make($this->password);
         $user->address_facturation = $this->address_facturation;
+
         $user->save();
 
         $customer = new Customer();
@@ -53,6 +54,7 @@ class RegisterForm extends Component
         $customer->email = $user->email;
         $customer->phone = $user->phone;
         $customer->address_facturation = $user->address_facturation;
+
         $customer->save();
 
         Auth::loginUsingId($user->id);

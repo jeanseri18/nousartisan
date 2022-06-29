@@ -39,8 +39,10 @@ Route::controller(App\Http\Controllers\CustomerHomeController::class)->middlewar
     Route::get('/customer-home/form/{id}/{name}',  'customerrequestform')->name('customer-request-form');
 });
 
-Route::controller(App\Http\Controllers\WorkerHomeController::class)->group(function(){
+Route::controller(App\Http\Controllers\WorkerHomeController::class)->middleware(['auth'])->group(function(){
     Route::get('/worker-home', 'index')->name('worker.home');
+    Route::get('/worker-home/detail-offer/{id}/{name}',  'detailoffer')->name('worker-detail-offer');
+    Route::get('/worker-home/list-offer/{id}/{name}',  'listoffer')->name('worker-list-offer');
     Route::get('/worker-home/myoffer', 'myoffer');
     Route::get('/worker-home/myoffer-wait', 'myofferwait');
     Route::get('/worker-home/myoffer-ok', 'myofferok');
@@ -84,7 +86,7 @@ Route::get('/pay', function () {
 
 Route::get('/detaildemande', function () {
     return view('detaildemande');
-}); 
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

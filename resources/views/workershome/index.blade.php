@@ -35,7 +35,7 @@
                     <!-- Blog-->
                     <div
                         class="card rounded-1 overflow-hidden bg-white">
-                        <a class="card-img rounded-0" href="{{ route('customerrequestform',['id'=> $service->id,'name'=>$service->name]) }}" data-img-height style="--img-height: 50%;">
+                        <a class="card-img rounded-0" href="{{route('worker-list-offer',['id'=> $service->id,'name'=>$service->name]) }}" data-img-height style="--img-height: 50%;">
                             <span
                                 class="badge bg-dark text-white position-absolute top-0 start-0 z-index-1 mt-20 ms-20">Service {{
                                 $service->name }}</span>

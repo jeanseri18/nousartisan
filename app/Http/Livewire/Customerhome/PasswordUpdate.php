@@ -27,16 +27,15 @@ class PasswordUpdate extends Component
         //ancien compare user->password
 
         $user = Auth::user();
-        
+
         $check = Hash::check($this->password,$user->password);
 
         if($check){
-            dd('okay');
-
             $user->password = Hash::make($this->newpassword);
             $user->save();
+            session()->flash('message', 'Mot de passe modifié avec succes');
         }else{
-            dd('noo');
+            session()->flash('error', 'Le mot de passe saisi est incorrect');
         }
 
 

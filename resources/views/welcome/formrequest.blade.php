@@ -47,10 +47,10 @@
                     <!-- Button--><a class="btn btn-accent-1 btn-link btn-clean" href="" target="_self">Demander ce service</a>
                 </div> --}}
 
+                @livewire('customerhome.welcome-creat-request',['ids'=>$idservice])
 
 
-
-                <form class=" rounded bg-white p-35 text-left">
+                {{-- <form class=" rounded bg-white p-35 text-left">
                     <h1 class="m-0 pe-30">Demande</h1>
                     <label>Titre du besion</label>
                     <input class="form-control form-control-style-2" type="text" placeholder="Titre du besion">
@@ -94,7 +94,7 @@
                         </div>
                     </div><br>
                        {{-- Le montant de la prestation est de 100 pour 10 heure de travail
-                        <br> --}}
+                        <br>
                         <br>
                         Frais de services <b><span  id="fs"></span></b><br><br>
                         Frais de services TVA <b><span id="fstva"></span></b><br><br>
@@ -105,7 +105,7 @@
                         Montant total <b><span id="mt"></span></b><br><br>
 
                     <a class="btn ">Connectez vous faire une demande !</a>
-                </form>
+                </form> --}}
 
 
             </div>
@@ -118,6 +118,9 @@
 @endsection
 @push('script')
     <script>
+
+            document.getElementById("prix").onchange = function() {calcul()};
+            document.getElementById("dure").onchange = function() {calcul()};
         function calcul() {
             var dure = document.getElementById('dure').value;
             var prix = document.getElementById('prix').value;

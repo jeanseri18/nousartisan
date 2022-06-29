@@ -21,6 +21,8 @@
     2 finalise
     3 annulé
 
+    ##
+
     #statut payemnt
     0 valide
     1 echec
