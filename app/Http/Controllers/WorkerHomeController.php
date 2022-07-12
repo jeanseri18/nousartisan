@@ -121,10 +121,9 @@ class WorkerHomeController extends Controller
      */
     public function myprofil()
     {
-    $data['title']='Mon compte';
+        $data['title']='Mon compte';
 
-
-    return view('workershome.profile',$data);
+        return view('workershome.profile',$data);
     }
 
        /**

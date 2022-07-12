@@ -1,11 +1,6 @@
 @extends('customerhome.app')
 @section('content')
-    {{-- <div class="py-240 position-relative">
-    <div class="background">
-        <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy"
-                src="assets/img/home.jpg" alt=""></div>
-    </div>
-</div> --}}
+    
     <br><br>
     <center>
         {{-- @livewire('customerhome.searchrequest') --}}
@@ -34,10 +29,8 @@
                                 data-filter="{{ $categorie->id }}">{{ $categorie->name }}</a>
                         </li>
                     @endforeach
-
-
-
                 </ul>
+
                 <div class="row isotope-grid gy-30">
                     @foreach ($services as $service)
                         <div class=" isotope-item col-12 col-md-6 col-lg-4"
@@ -63,10 +56,8 @@
                                     heure</a>
                         </div>
                     @endforeach
-                    {{-- <div class="text-center mt-80">
-                    <!-- Button--><a class="btn btn-light" href="#" target="_self">Load more</a>
-                </div> --}}
                 </div>
             </div>
         </div>
+    </div> 
     @endsection

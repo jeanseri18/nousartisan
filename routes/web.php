@@ -92,6 +92,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
+
+Route::post('logout', [App\Http\Controllers\LogoutControler::class, 'logout'])->name('logout');
+
+
 route::prefix("administration")->group(function(){
     Route::resource('benefitCategories', App\Http\Controllers\BenefitCategoryController::class);
 

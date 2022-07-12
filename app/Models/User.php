@@ -17,6 +17,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $appends = ['role'];
+
     protected $fillable = [
         'name',
         'email',
@@ -77,4 +80,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo(UserRole::class);
     }
+
+
+    public function getRoleAttribute(){
+        return UserRole::where('id', $this->user_role_id)->first();
+    }
+
 }

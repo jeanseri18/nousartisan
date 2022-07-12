@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Customers;
 
+use App\CustomClass\CheckUserForRedirection;
 use App\Models\Customer;
 use App\Models\User;
 use App\Models\UserRole;
@@ -57,15 +58,11 @@ class RegisterForm extends Component
 
         $customer->save();
 
+        //Create User Session
         Auth::loginUsingId($user->id);
 
-        return redirect()->route('customers.home');
-        // dd(
-        //     [
-        //         "user"=> $user,
-        //         "customer"=> $customer,
-        //     ]
-        // );
+        //Manage Redirection
+        CheckUserForRedirection::afterLogin($user);
 
     }
 

@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire\Workers;
 
+use App\CustomClass\CheckUserForRedirection;
 use App\Models\User;
 use App\Models\UserRole;
 use App\Models\Worker;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
@@ -64,13 +66,11 @@ class RegisterForm extends Component
         // $worker->owner_number = $user->phone;
         // $worker->owner_name = $user->address_facturation;
 
-        // dd(
-        //     [
-        //         "user"=> $user,
-        //         "worker"=> $worker,
-        //     ]
-        // );
-        return redirect('/worker-home');
+        //Create User Session
+        Auth::loginUsingId($user->id);
+
+        //Manage Redirection
+        CheckUserForRedirection::afterLogin($user);
 
     }
 

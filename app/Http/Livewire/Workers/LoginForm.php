@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Workers;
 
+use App\CustomClass\CheckUserForRedirection;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -22,11 +24,12 @@ class LoginForm extends Component
         $login  = Auth::attempt(['email' => $this->email, 'password' => $this->password]);
 
         if($login == true){
-
             //Get user session
-            $customer  = Auth::user();
+            $user = Auth::user();
+            Auth::loginUsingId($user->id);
 
-            return redirect()->route('worker.home');
+            CheckUserForRedirection::afterLogin($user);
+  
         }else{
             $this->no_loggin = true;
         }

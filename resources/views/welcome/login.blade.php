@@ -1,12 +1,19 @@
 @extends('welcome.app')
+
+@section('title')
+    Connexion ( Client | Prestaire)    
+@endsection
+
 @section('content')
 
 <div class="pt-150 pb-70 position-relative align-items-center d-flex">
+
     <div class="background">
         <div class="background-image jarallax" data-jarallax data-speed="0.8"><img class="jarallax-img" loading="lazy" src="{{asset('assets/img/home-4-hero-1920x1080.jpg')}}" alt=""></div>
         <div class="background-color" style="--background-color: #000; opacity: .15;"></div>
         <div class="background-color" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 150px);"></div>
     </div>
+
     <div class="container">
         <div class="row gy-70 align-items-center">
             <div class="col-lg-7">
@@ -18,6 +25,7 @@
             </div>
         </div>
     </div>
+    
 </div>
 
 

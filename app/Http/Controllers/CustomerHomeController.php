@@ -19,19 +19,14 @@ class CustomerHomeController extends Controller
      */
     public function index(Request $request)
     {
-    $data['title']='Service';
-    $data['categories']=BenefitCategory::All();
-    $search=$request->get('search');
+        $data['title']='Service';
+        $data['categories'] = BenefitCategory::all();
+        $search=$request->get('search');
 
-    $data['services']=ServiceOfBenefitCategory::where('service_of_benefit_categories.name', 'like', '%'.$search.'%')
-    ->get();
-    return view('customerhome.index',$data);
+        $data['services']=ServiceOfBenefitCategory::where('service_of_benefit_categories.name', 'like', '%'.$search.'%')->get();
+
+        return view('customerhome.index',$data);
     }
-
-
-
-
-
 
      /**
      * Display a listing of the resource.
@@ -55,11 +50,11 @@ class CustomerHomeController extends Controller
      */
     public function myrequestwait()
     {
-    $data['title']='Mes demandes';
-    $data['myrequests']=ServiceRequest::where('service_requests.user_id',Auth::id())
-    ->where('service_requests.status_id','1')
-    ->join('workers','service_requests.worker_id','=','workers.id')
-    ->get(['service_requests.*','workers.name','workers.image']);
+        $data['title']='Mes demandes';
+        $data['myrequests']=ServiceRequest::where('service_requests.user_id',Auth::id())
+        ->where('service_requests.status_id','1')
+        ->join('workers','service_requests.worker_id','=','workers.id')
+        ->get(['service_requests.*','workers.name','workers.image']);
 
  
     return view('customerhome.myrequest-wait',$data);
@@ -71,13 +66,13 @@ class CustomerHomeController extends Controller
      */
     public function myrequestok()
     {
-    $data['title']='Mes demandes';
-    $data['myrequests']=ServiceRequest::where('user_id',Auth::id())
-    ->where('service_requests.status_id','2')
-    ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
-   ->get(['service_requests.*','service_of_benefit_categories.name']);
-//
-    return view('customerhome.myrequest-ok',$data);
+            $data['title']='Mes demandes';
+            $data['myrequests']=ServiceRequest::where('user_id',Auth::id())
+                ->where('service_requests.status_id','2')
+                ->join('service_of_benefit_categories','service_requests.service_of_benefit_category_id','=','service_of_benefit_categories.id')
+                ->get(['service_requests.*','service_of_benefit_categories.name']);
+    
+            return view('customerhome.myrequest-ok',$data);
     }
 
         /**
@@ -155,9 +150,6 @@ class CustomerHomeController extends Controller
     }
 
 
-
-
-
        /**
      * Display a listing of the resource.
      *
@@ -165,15 +157,12 @@ class CustomerHomeController extends Controller
      */
     public function myprofil()
     {
-    $data['title']='Mon compte';
-    $data['user']= User::find(Auth::id());
+        $data['title']='Mon compte';
+        $data['user']= User::find(Auth::id());
 
 
-    return view('customerhome.myprofil',$data);
+        return view('customerhome.myprofil',$data);
     }
-
-
-
 
 
         /**
@@ -184,20 +173,20 @@ class CustomerHomeController extends Controller
     public function profilupdate(Request $request,$id)
     {
 
-    $user= User::find($id);
-    $name=  $request->get('name');
-    $tel=   $request->get('tel');
-    $email= $request->get('email');
-    $adress= $request->get('adress');
+        $user= User::find($id);
+        $name=  $request->get('name');
+        $tel=   $request->get('tel');
+        $email= $request->get('email');
+        $adress= $request->get('adress');
 
-    $user->name=$name;
-    $user->phone=$tel;
-    $user->email=$email ;
-    $user->address_facturation=$adress;
+        $user->name=$name;
+        $user->phone=$tel;
+        $user->email=$email ;
+        $user->address_facturation=$adress;
 
-    $user->save();
-    session()->flash('messageprofil', 'Vos information ont été modifié avec  succes.');
-    return back();
+        $user->save();
+        session()->flash('messageprofil', 'Vos information ont été modifié avec  succes.');
+        return back();
     }
 
 

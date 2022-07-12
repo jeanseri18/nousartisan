@@ -29,13 +29,12 @@ class Worker extends Model
 
     public $table = 'workers';
 
+    protected $appends = ['users'];
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-
     protected $dates = ['deleted_at'];
-
-
 
     public $fillable = [
         'number_siren',
@@ -85,6 +84,9 @@ class Worker extends Model
         'updated_at' => 'nullable',
         'deleted_at' => 'nullable'
     ];
+
+
+ 
 
 
 }

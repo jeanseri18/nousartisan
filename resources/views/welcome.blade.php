@@ -174,7 +174,6 @@
     <!-- Main-->
     <div class="content-wrap  container">
         <br><br> <br>
-
         <center>
             <form class="form-group-overlay mx-lg-70 container col-md-8"><input
                     class="form-control form-control-white form-control-style-3 shadow" type="email"

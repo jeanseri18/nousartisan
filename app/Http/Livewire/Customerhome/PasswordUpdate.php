@@ -33,9 +33,13 @@ class PasswordUpdate extends Component
         if($check){
             $user->password = Hash::make($this->newpassword);
             $user->save();
-            session()->flash('message', 'Mot de passe modifié avec succes');
+            // session()->flash('message', 'Mot de passe modifié avec succes');
+            
+            $this->emit('update_password');
+            
         }else{
-            session()->flash('error', 'Le mot de passe saisi est incorrect');
+            $this->emit('update_error');
+            // session()->flash('error', 'Le mot de passe saisi est incorrect');
         }
 
 
