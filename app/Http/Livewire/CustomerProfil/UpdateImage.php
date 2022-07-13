@@ -19,11 +19,22 @@ class UpdateImage extends Component
 
     public function updateImage(){
         $user = User::where('id', $this->user->id)->first();
-        $imageName = $this->image->getClientOriginalName() . $this->image->getClientOriginalExtension();
-    
-        $this->image->storeAs(public_path('/images'), $imageName);
-        $user->customer->image_url = $this->image->store()->getPath();
-        // dd($user->customer->image_url);
+        $imageName = $this->image->getClientOriginalName();
+        $options = [];
+        $path = public_path('/images');
+        $save  = $this->image->storeAs($path, $imageName, $options);
+
+        if($save){
+            dd(["okay", $save]);
+        }
+        
+        $user->customer->image_url = $this->image->getRealPath();
+        
+        // dd([
+        //     $path,
+        //     $imageName,
+        //     $user
+        // ]);
     }
 
     public function render()

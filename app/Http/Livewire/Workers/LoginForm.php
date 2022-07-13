@@ -28,6 +28,7 @@ class LoginForm extends Component
             $user = Auth::user();
             Auth::loginUsingId($user->id);
 
+            //m
             CheckUserForRedirection::afterLogin($user);
   
         }else{
